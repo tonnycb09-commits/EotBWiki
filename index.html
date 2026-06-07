@@ -134,6 +134,17 @@ ul.styled li strong { color:var(--gold2); }
 .header-half{background:linear-gradient(135deg,rgba(45,74,62,0.3),transparent);}
 .mystery-box{border:1px solid #7c4daa;border-radius:3px;padding:16px 20px;margin-bottom:20px;background:rgba(124,77,170,0.06);}
 .mystery-title{font-family:'Cinzel',serif;font-size:12px;color:#b39ddb;letter-spacing:0.1em;margin-bottom:8px;text-transform:uppercase;}
+.nav-group { border-bottom: 1px solid var(--border); }
+.nav-group-header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 20px; font-family:'Cinzel',serif; font-size:10px;
+  color:var(--gold); letter-spacing:0.2em; text-transform:uppercase;
+  cursor:pointer; transition:all 0.2s; user-select:none;
+}
+.nav-group-header:hover { background:rgba(201,168,76,0.05); color:var(--gold2); }
+.nav-arrow { font-size:12px; transition:transform 0.2s; }
+.nav-group-items { overflow:hidden; max-height:0; transition:max-height 0.3s ease; }
+.nav-group-items.open { max-height:500px; }
 ::-webkit-scrollbar{width:6px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
@@ -157,27 +168,57 @@ ul.styled li strong { color:var(--gold2); }
     <div class="sidebar-subtitle">Wiki Joueur · An 547 AA</div>
   </div>
   <nav>
-    <div class="nav-section">Accueil</div>
-    <a class="nav-item active" onclick="showPage('home')"><span class="nav-dot"></span> Présentation</a>
-    <div class="nav-section">Le Monde</div>
-    <a class="nav-item" onclick="showPage('chronologie')"><span class="nav-dot"></span> Chronologie</a>
-    <a class="nav-item" onclick="showPage('la-breche')"><span class="nav-dot"></span> La Brèche</a>
-    <a class="nav-item" onclick="showPage('antagoniste')"><span class="nav-dot"></span> L'Antagoniste</a>
-    <div class="nav-section">Nations</div>
-    <a class="nav-item" onclick="showPage('monilia')"><span class="nav-dot" style="background:var(--mon-light)"></span> Monilia</a>
-    <a class="nav-item" onclick="showPage('haern')"><span class="nav-dot" style="background:var(--haern-light)"></span> Haern</a>
-    <a class="nav-item" onclick="showPage('curico')"><span class="nav-dot" style="background:var(--curico-light)"></span> Curico</a>
-    <div class="nav-section">Races</div>
-    <a class="nav-item" onclick="showPage('humains')"><span class="nav-dot"></span> Humains (3 origines)</a>
-    <a class="nav-item" onclick="showPage('elfes')"><span class="nav-dot" style="background:var(--elf-light)"></span> Elfes</a>
-    <a class="nav-item" onclick="showPage('orcs')"><span class="nav-dot" style="background:var(--orc-light)"></span> Orcs</a>
-    <a class="nav-item" onclick="showPage('gobelins')"><span class="nav-dot" style="background:var(--gob-light)"></span> Gobelins</a>
-    <a class="nav-item" onclick="showPage('alii')"><span class="nav-dot" style="background:var(--alii-light)"></span> Alii</a>
-    <a class="nav-item" onclick="showPage('demi-elfes')"><span class="nav-dot" style="background:var(--half-light)"></span> Demi-Elfes</a>
-    <a class="nav-item" onclick="showPage('demi-orcs')"><span class="nav-dot" style="background:var(--half-light)"></span> Demi-Orcs</a>
-    <div class="nav-section">Règles</div>
-    <a class="nav-item" onclick="showPage('hanses')"><span class="nav-dot" style="background:var(--gold)"></span> Les Hanses</a>
-    <a class="nav-item" onclick="showPage('magie')"><span class="nav-dot"></span> La Magie</a>
+    <div class="nav-group">
+      <div class="nav-group-header" onclick="toggleGroup('accueil')">
+        <span>Accueil</span><span class="nav-arrow" id="arrow-accueil">▸</span>
+      </div>
+      <div class="nav-group-items" id="group-accueil">
+        <a class="nav-item active" onclick="showPage('home')"><span class="nav-dot"></span> Présentation</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-header" onclick="toggleGroup('monde')">
+        <span>Le Monde</span><span class="nav-arrow" id="arrow-monde">▸</span>
+      </div>
+      <div class="nav-group-items" id="group-monde">
+        <a class="nav-item" onclick="showPage('chronologie')"><span class="nav-dot"></span> Chronologie</a>
+        <a class="nav-item" onclick="showPage('la-breche')"><span class="nav-dot"></span> La Brèche</a>
+        <a class="nav-item" onclick="showPage('antagoniste')"><span class="nav-dot"></span> L'Antagoniste</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-header" onclick="toggleGroup('nations')">
+        <span>Nations</span><span class="nav-arrow" id="arrow-nations">▸</span>
+      </div>
+      <div class="nav-group-items" id="group-nations">
+        <a class="nav-item" onclick="showPage('monilia')"><span class="nav-dot" style="background:var(--mon-light)"></span> Monilia</a>
+        <a class="nav-item" onclick="showPage('haern')"><span class="nav-dot" style="background:var(--haern-light)"></span> Haern</a>
+        <a class="nav-item" onclick="showPage('curico')"><span class="nav-dot" style="background:var(--curico-light)"></span> Curico</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-header" onclick="toggleGroup('races')">
+        <span>Races</span><span class="nav-arrow" id="arrow-races">▸</span>
+      </div>
+      <div class="nav-group-items" id="group-races">
+        <a class="nav-item" onclick="showPage('humains')"><span class="nav-dot"></span> Humains (3 origines)</a>
+        <a class="nav-item" onclick="showPage('elfes')"><span class="nav-dot" style="background:var(--elf-light)"></span> Elfes</a>
+        <a class="nav-item" onclick="showPage('orcs')"><span class="nav-dot" style="background:var(--orc-light)"></span> Orcs</a>
+        <a class="nav-item" onclick="showPage('gobelins')"><span class="nav-dot" style="background:var(--gob-light)"></span> Gobelins</a>
+        <a class="nav-item" onclick="showPage('alii')"><span class="nav-dot" style="background:var(--alii-light)"></span> Alii</a>
+        <a class="nav-item" onclick="showPage('demi-elfes')"><span class="nav-dot" style="background:var(--half-light)"></span> Demi-Elfes</a>
+        <a class="nav-item" onclick="showPage('demi-orcs')"><span class="nav-dot" style="background:var(--half-light)"></span> Demi-Orcs</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-header" onclick="toggleGroup('regles')">
+        <span>Règles</span><span class="nav-arrow" id="arrow-regles">▸</span>
+      </div>
+      <div class="nav-group-items" id="group-regles">
+        <a class="nav-item" onclick="showPage('hanses')"><span class="nav-dot" style="background:var(--gold)"></span> Les Hanses</a>
+        <a class="nav-item" onclick="showPage('magie')"><span class="nav-dot"></span> La Magie</a>
+      </div>
+    </div>
   </nav>
 </aside>
 
@@ -1452,6 +1493,17 @@ function showPage(pageId) {
     }
   });
   document.querySelector('.main').scrollTo(0, 0);
+}
+function toggleGroup(id) {
+  const group = document.getElementById('group-' + id);
+  const arrow = document.getElementById('arrow-' + id);
+  if (group.classList.contains('open')) {
+    group.classList.remove('open');
+    arrow.textContent = '▸';
+  } else {
+    group.classList.add('open');
+    arrow.textContent = '▾';
+  }
 }
 </script>
 </body>
