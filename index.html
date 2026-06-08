@@ -144,7 +144,8 @@ ul.styled li strong { color:var(--gold2); }
 .nav-group-header:hover { background:rgba(201,168,76,0.05); color:var(--gold2); }
 .nav-arrow { font-size:12px; transition:transform 0.2s; }
 .nav-group-items { overflow:hidden; max-height:0; transition:max-height 0.3s ease; }
-.nav-group-items.open { max-height:500px; }
+.nav-group-items.open { max-height:800px; }
+.nav-subtitle { padding:8px 20px 2px; font-family:'Cinzel',serif; font-size:8px; color:var(--text3); letter-spacing:0.2em; text-transform:uppercase; opacity:0.7; }
 ::-webkit-scrollbar{width:6px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
@@ -218,6 +219,23 @@ ul.styled li strong { color:var(--gold2); }
         <a class="nav-item" onclick="showPage('pj-angus')"><span class="nav-dot" style="background:var(--haern-light)"></span> Angus McFieden</a>
         <a class="nav-item" onclick="showPage('pj-armando')"><span class="nav-dot" style="background:var(--curico-light)"></span> Armando Salvador</a>
         <a class="nav-item" onclick="showPage('pj-felis')"><span class="nav-dot" style="background:var(--curico-light)"></span> Felis Erosio</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-header" onclick="toggleGroup('pnj')">
+        <span>PNJ Notables · Légendes</span><span class="nav-arrow" id="arrow-pnj">▸</span>
+      </div>
+      <div class="nav-group-items" id="group-pnj">
+        <div class="nav-subtitle">— Monilia —</div>
+        <a class="nav-item" onclick="showPage('pnj-sebastian')"><span class="nav-dot" style="background:var(--mon-light)"></span> Sebastián d'Ysmandis</a>
+        <a class="nav-item" onclick="showPage('pnj-hortense')"><span class="nav-dot" style="background:var(--mon-light)"></span> Hortense Leona</a>
+        <a class="nav-item" onclick="showPage('pnj-salma')"><span class="nav-dot" style="background:var(--mon-light)"></span> Salma Vitrel « la Mésange »</a>
+        <a class="nav-item" onclick="showPage('pnj-salomon')"><span class="nav-dot" style="background:var(--mon-light)"></span> Salomon Garivald</a>
+        <div class="nav-subtitle">— Haern —</div>
+        <a class="nav-item" onclick="showPage('pnj-loup')"><span class="nav-dot" style="background:var(--haern-light)"></span> Le Loup</a>
+        <a class="nav-item" onclick="showPage('pnj-jon')"><span class="nav-dot" style="background:var(--haern-light)"></span> Jon McNamara</a>
+        <div class="nav-subtitle">— Curico —</div>
+        <a class="nav-item" onclick="showPage('pnj-silvio')"><span class="nav-dot" style="background:var(--curico-light)"></span> Silvio Benesta</a>
       </div>
     </div>
     <div class="nav-group">
@@ -1760,6 +1778,133 @@ ul.styled li strong { color:var(--gold2); }
       <p>Derrière l'aventurier intrépide et le chasseur de reliques se cache une vérité bien plus simple : Felis n'a pas réellement de grand dessein. Pas de quête héroïque, pas d'ambition dévorante. C'est un gamin des rues qui a eu faim, qui a eu froid, et qui ne veut au fond qu'une seule chose — la richesse, oui, le pouvoir peut-être, mais surtout la tranquillité.</p>
       <p>Il porte bien son nom. Felis est un chat. Il veut être nourri, au chaud, au calme. Tout le reste — les ruines, les trésors, les cartes indéchiffrables — n'est qu'un moyen d'y parvenir. Et comme un chat, il retombe toujours sur ses pattes, et ne sert jamais que ses propres intérêts.</p>
     </div>
+  </div>
+</div>
+</div>
+<div id="page-pnj-sebastian" class="page">
+<div class="content header-mon">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
+    <h1 class="page-title color-mon">Sebastián Pierran d'Ysmandis</h1>
+    <p class="page-quote">« Le plus grand barde de Monilia. »</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Monilia</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Vivant — célèbre dans tout le royaume</div></div>
+    <div class="info-box full"><div class="info-label">Troupe</div><div class="info-value">Igni e Aqua — troupe ambulante (« le Feu et l'Eau »)</div></div>
+  </div>
+  <div class="section">
+    <p>Il y a des artistes que l'on apprécie, et il y a Sebastián Pierran d'Ysmandis. Dans tout Monilia, des tavernes d'Ad Contritio aux salons feutrés d'Amethystus, son nom seul suffit à remplir une salle. Maître incontesté de la scène, il sillonne le royaume à la tête de sa troupe ambulante, <strong class="color-mon">Igni e Aqua</strong> — « le Feu et l'Eau » — réputée pour ses spectacles aussi flamboyants que bouleversants.</p>
+    <p>On dit que ses représentations mêlent musique, illusion et une pointe de magie liturgique savamment dosée, dans le respect des codes moniliens. Là où d'autres bardes amusent, Sebastián émeut, transporte, marque les esprits. Sa réputation dépasse les frontières : même à Curico, on s'arrache les billets quand la rumeur annonce son passage.</p>
+  </div>
+</div>
+</div>
+<div id="page-pnj-hortense" class="page">
+<div class="content header-mon">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
+    <h1 class="page-title color-mon">Hortense Leona</h1>
+    <p class="page-quote">« La Maîtresse de l'Ordre · Héroïne de l'Île du Nord. »</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Monilia</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Morte au combat — Guerre des Dents Calmes</div></div>
+    <div class="info-box full"><div class="info-label">Titre</div><div class="info-value">Grande Cheffe Paladin, Maîtresse de l'Ordre</div></div>
+  </div>
+  <div class="section">
+    <p>Le nom d'Hortense Leona se prononce avec respect dans les rangs des Paladins de Monilia. Grande Cheffe de l'Ordre durant la Guerre des Dents Calmes, elle incarnait tout ce que la foi monilienne révère : la discipline, le sacrifice, le courage juste cher au dieu Kaelor.</p>
+    <p>Sa légende s'est scellée sur <strong class="color-mon">l'Île du Nord</strong>. Encerclée avec une simple unité d'apprentis — des gamins à peine formés — elle tint la position <strong>trois jours et trois nuits</strong> face à deux bataillons haerniens appuyés par une unité de Chasseurs d'élite. Aucun ne survécut. Mais leur résistance acharnée est devenue un symbole : celui d'une poignée de croyants qui refusèrent de céder, même face à l'acier et la poudre de Haern.</p>
+  </div>
+</div>
+</div>
+<div id="page-pnj-loup" class="page">
+<div class="content header-haern">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
+    <h1 class="page-title color-haern">Le Loup</h1>
+    <p class="page-quote">« Chef de file du Bras de l'Ouest. »</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Haern</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Vivant — identité inconnue</div></div>
+    <div class="info-box full"><div class="info-label">Hanse</div><div class="info-value">Le Bras de l'Ouest — ~3000 membres, la plus grande Hanse connue</div></div>
+  </div>
+  <div class="section">
+    <p>Personne ne connaît son vrai nom. Personne ne sait à quoi il ressemble vraiment. On l'appelle simplement <strong class="color-haern">Le Loup</strong>, et derrière ce surnom se cache l'une des figures les plus redoutées du continent. À la tête du <strong>Bras de l'Ouest</strong> — la plus grande Hanse jamais constituée, forte de près de <strong>3000 hommes et femmes</strong> — il commande une force mercenaire dont la puissance rivalise avec celle de certaines armées nationales.</p>
+    <p>Énigmatique, méthodique, jamais là où on l'attend, Le Loup a bâti son empire sur la discrétion et l'efficacité. Le Bras de l'Ouest ne pose pas de questions et ne laisse pas de traces — du moment que le contrat est honoré. Dans un monde où les Hanses vivent et meurent selon leur utilité, la sienne est devenue trop grande pour qu'on ose la défier.</p>
+  </div>
+</div>
+</div>
+<div id="page-pnj-salomon" class="page">
+<div class="content header-mon">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
+    <h1 class="page-title color-gold">Salomon Garivald</h1>
+    <p class="page-quote">« Mage de légende · Fondateur d'Adversus Monstra. »</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Monilia</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Légende — vivant ou mort ?</div></div>
+    <div class="info-box full"><div class="info-label">Haut fait</div><div class="info-value">Première expédition en Terra Gigantum · Fondateur de l'avant-poste Adversus Monstra</div></div>
+  </div>
+  <div class="section">
+    <p>Salomon Garivald est de ces noms qui appartiennent déjà à moitié au mythe. Mage d'un talent rare, il entra dans l'Histoire en menant la <strong>première expédition documentée en Terra Gigantum</strong>, cette jungle hostile du sud peuplée de créatures colossales et de ruines effondrées où nul n'osait s'aventurer.</p>
+    <p>Là où d'autres auraient péri, Garivald établit un point d'ancrage : l'avant-poste <strong class="color-gold">Adversus Monstra</strong> — « Contre les Monstres » — qui tient encore aujourd'hui la lisière entre la civilisation monilienne et les horreurs du sud. Fondateur, explorateur, survivant, il a prouvé qu'on pouvait défier Terra Gigantum et en revenir. Du moins, une fois.</p>
+  </div>
+</div>
+</div>
+<div id="page-pnj-silvio" class="page">
+<div class="content header-curico">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
+    <h1 class="page-title color-curico">Silvio Benesta</h1>
+    <p class="page-quote">« Le Premier Navigateur de la Brèche. »</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Curico</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Légende</div></div>
+    <div class="info-box full"><div class="info-label">Haut fait</div><div class="info-value">Premier marin à cartographier un passage dans la Brèche entre Haern et Monilia</div></div>
+  </div>
+  <div class="section">
+    <p>Silvio Benesta est entré dans l'Histoire comme le premier marin de Curico à avoir cartographié un passage à travers la Brèche, reliant Haern et Monilia là où tous les autres ne voyaient qu'une mer de chaos et de mort. Un exploit que beaucoup jugeaient impossible — et qui fit de Curico ce qu'elle est aujourd'hui.</p>
+    <p>Mais la légende retient surtout <em>pourquoi</em> il s'y risqua. On raconte que Silvio ne brava pas la Brèche pour la gloire ni pour l'or, mais pour <strong class="color-curico">Julia</strong>, son amour disparu en mer. Porté par l'espoir fou de la retrouver quelque part dans ces eaux qui défient la réalité, il s'enfonça là où nul n'osait aller. Nul ne sait s'il la retrouva jamais — mais le chemin qu'il traça, lui, demeure.</p>
+  </div>
+</div>
+</div>
+<div id="page-pnj-salma" class="page">
+<div class="content header-mon">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
+    <h1 class="page-title color-mon">Salma Vitrel</h1>
+    <p class="page-quote">« La Mésange · L'une des Sept Lames d'Orhein. »</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Monilia</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Vivante</div></div>
+    <div class="info-box"><div class="info-label">Titre</div><div class="info-value">L'une des Sept Lames d'Orhein</div></div>
+    <div class="info-box"><div class="info-label">Hanse</div><div class="info-value">Basée à Monilia</div></div>
+  </div>
+  <div class="section">
+    <p>Duelliste de génie, Salma Vitrel compte parmi les <strong class="color-mon">Sept Lames d'Orhein</strong> — ce cercle très fermé des plus redoutables bretteurs du continent. Surnommée « la Mésange », elle dirige une Hanse basée à Monilia et s'est forgé une réputation de mercenaire implacable, dont la lame ne tremble jamais.</p>
+    <p>À cette maîtrise martiale s'ajoute une beauté redoutable, dont on dit qu'elle a désarmé autant d'adversaires que son épée. Charme et danger se confondent chez elle, et nul ne sait jamais vraiment lequel des deux il affronte.</p>
+  </div>
+</div>
+</div>
+<div id="page-pnj-jon" class="page">
+<div class="content header-haern">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
+    <h1 class="page-title color-haern">Jon McNamara</h1>
+    <p class="page-quote">« Le Plus Grand Soldat Haernien · Fondateur des Chasseurs. »</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Haern</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Vétéran de légende</div></div>
+    <div class="info-box full"><div class="info-label">Haut fait</div><div class="info-value">Fondateur de l'ordre des Chasseurs de Haern</div></div>
+  </div>
+  <div class="section">
+    <p>Jon McNamara est le fondateur de l'<strong class="color-haern">ordre des Chasseurs de Haern</strong>, cette unité d'élite redoutée jusque par ses propres alliés. On le surnomme « le plus grand soldat haernien », et sa carrière justifie amplement le titre : vétéran d'innombrables chasses aux monstres, d'escarmouches sur tous les fronts et d'opérations clandestines dont la plupart ne seront jamais révélées.</p>
+    <p>Figure centrale de la puissance militaire haernienne, il travaillait en étroite collaboration avec les <strong>clans gobelins</strong>, assurant par cette alliance l'avancée constante de l'armement de Haern. Sans lui, ni les Chasseurs ni la suprématie technologique de la nation ne seraient ce qu'ils sont devenus.</p>
   </div>
 </div>
 </div>
