@@ -212,6 +212,16 @@ ul.styled li strong { color:var(--gold2); }
       </div>
     </div>
     <div class="nav-group">
+      <div class="nav-group-header" onclick="toggleGroup('lieux')">
+        <span>Lieux</span><span class="nav-arrow" id="arrow-lieux">▸</span>
+      </div>
+      <div class="nav-group-items" id="group-lieux">
+        <a class="nav-item" onclick="showPage('kodai')"><span class="nav-dot" style="background:var(--elf-light)"></span> Kodai no Mori</a>
+        <a class="nav-item" onclick="showPage('terra-gigantum')"><span class="nav-dot" style="background:var(--orc-red)"></span> Terra Gigantum</a>
+        <a class="nav-item" onclick="showPage('turris-nebularum')"><span class="nav-dot" style="background:var(--gold)"></span> Turris Nebularum</a>
+      </div>
+    </div>
+    <div class="nav-group">
       <div class="nav-group-header" onclick="toggleGroup('pj')">
         <span>Personnages Joueurs</span><span class="nav-arrow" id="arrow-pj">▸</span>
       </div>
@@ -231,6 +241,7 @@ ul.styled li strong { color:var(--gold2); }
         <a class="nav-item" onclick="showPage('pnj-hortense')"><span class="nav-dot" style="background:var(--mon-light)"></span> Hortense Leona</a>
         <a class="nav-item" onclick="showPage('pnj-salma')"><span class="nav-dot" style="background:var(--mon-light)"></span> Salma Vitrel « la Mésange »</a>
         <a class="nav-item" onclick="showPage('pnj-salomon')"><span class="nav-dot" style="background:var(--mon-light)"></span> Salomon Garivald</a>
+        <a class="nav-item" onclick="showPage('pnj-krauss')"><span class="nav-dot" style="background:var(--gold)"></span> Maximilian Krauss</a>
         <div class="nav-subtitle">— Haern —</div>
         <a class="nav-item" onclick="showPage('pnj-loup')"><span class="nav-dot" style="background:var(--haern-light)"></span> Le Loup</a>
         <a class="nav-item" onclick="showPage('pnj-jon')"><span class="nav-dot" style="background:var(--haern-light)"></span> Jon McNamara</a>
@@ -2028,6 +2039,170 @@ ul.styled li strong { color:var(--gold2); }
     <p>On ne connaît plus son vrai nom, ou plus personne n'ose le prononcer. Pour tous à Curico, elle est simplement « la Veuve de la Brèche ». Navigatrice chevronnée, elle commandait l'un des meilleurs équipages de la cité — jusqu'au voyage de trop. Partie dans le brouillard avec une vingtaine d'âmes, elle en est revenue seule, des semaines plus tard, sur un navire intact mais vide. Aucune trace de l'équipage. Aucune explication.</p>
     <p>Depuis, elle n'est plus tout à fait là. Elle parle peu, fixe l'horizon des heures durant, et dit entendre des voix dans le silence de la Brèche — des murmures, des appels, parfois ceux de ses marins disparus. Beaucoup la prennent pour une folle brisée par le deuil et l'épreuve. D'autres, plus rares, se demandent si elle n'est pas devenue la seule personne d'Orhein à vraiment <em>écouter</em> ce que la Brèche essaie de dire depuis toujours.</p>
     <p>Elle accepte encore, parfois, de guider un navire à travers les eaux instables. Ses tarifs sont déraisonnables, ses conditions étranges, et ses itinéraires défient toute logique de navigateur. Mais elle n'a jamais reperdu un seul passager. Pas un.</p>
+  </div>
+</div>
+</div>
+<div id="page-pnj-krauss" class="page">
+<div class="content header-mon">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables &middot; L&#233;gendes d'Orhein</div>
+    <h1 class="page-title color-gold">Maximilian Krauss</h1>
+    <p class="page-quote">&#171; Gemma in Caeno. &#187;</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Haern &mdash; orphelin</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Vivant &mdash; Graci&#233;</div></div>
+    <div class="info-box"><div class="info-label">Classe</div><div class="info-value">Magicien &mdash; don exceptionnel</div></div>
+    <div class="info-box"><div class="info-label">Postes</div><div class="info-value">Professeur &#224; l'Acad&#233;mie d'Hyacenthus &middot; Propri&#233;taire de la Turris Nebularum</div></div>
+    <div class="info-box full"><div class="info-label">Surnom Monilien</div><div class="info-value">Gemma in Caeno &mdash; &#171; Un joyau dans la fange &#187;</div></div>
+  </div>
+
+  <div class="section">
+    <p>Maximilian Krauss est ce que les clercs moniliens appellent, avec un m&#233;lange d'admiration et de malaise, un <strong class="color-gold">Gemma in Caeno</strong> &mdash; un joyau dans la fange. N&#233; &#224; Haern, orphelin dans une nation qui se m&#233;fie de la magie comme de la peste, il a d&#233;velopp&#233; seul un don d'une puissance rare, suffisamment remarquable pour que Monilia, son ennemie id&#233;ologique, finisse par le remarquer &mdash; et l'accueillir &#224; l'Acad&#233;mie d'Hyacenthus.</p>
+    <p>Son ascension fut brillante. Sa chute, fracassante.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Le Crime &mdash; et la Punition</div>
+    <p>Les d&#233;tails de son crime restent scell&#233;s dans les archives du Haut Clerg&#233;. Ce qu'on sait : cela concernait la manipulation du temps, une des magies les plus proscrites qui soit aux yeux de la Concorde Divine. Dans l'acte lui-m&#234;me, il perdit son oeil droit. Pour la punition, le clerg&#233; lui prit le gauche &mdash; et le bannit dans Terra Gigantum, condamnation qui tenait plus de l'ex&#233;cution d&#233;guis&#233;e que de l'exil.</p>
+    <p>Il revint un mois plus tard. Seul. Vivant. Avec peu d'informations sur la jungle &mdash; ce qu'il r&#233;suma lui-m&#234;me avec une franchise d&#233;sarmante :</p>
+    <div class="advert">
+      <div class="advert-title">Devant le Haut Clerg&#233;</div>
+      <em>&#171; Vous m'avez enlev&#233; mon dernier oeil fonctionnel, et vous voulez une &#233;tude topographique ? &#187;</em>
+    </div>
+    <p>Il fut graci&#233;. Personne n'a jamais vraiment expliqu&#233; pourquoi.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Apr&#232;s la Gr&#226;ce</div>
+    <p>Krauss reprit son poste &#224; l'Acad&#233;mie d'Hyacenthus, o&#249; il enseigne encore aujourd'hui. Ce qu'il transmet exactement &#224; ses &#233;tudiants ne figure dans aucun programme officiel. Les rares &#233;l&#232;ves qui en parlent choisissent leurs mots avec soin.</p>
+    <p>Mais son oeuvre la plus connue n'est pas &#224; l'Acad&#233;mie. Profitant d'une obscure loi d'acquisition fonci&#232;re, Krauss fit l'acquisition de la tour ancienne du Lac Bruma, au pied du Mont Falco Alae. Il la rebaptisa <strong class="color-gold">Turris Nebularum</strong> &mdash; la Tour des Brumes.</p>
+    <p>Tout le monde l'appelle autrement : <em>la Tour des Estrophi&#233;s</em>.</p>
+    <p>Car c'est l&#224; que Krauss re&#231;oit les laiss&#233;s-pour-compte de la magie &mdash; mages ayant perdu l'usage de leurs membres lors d'accidents ou d'anomalies, praticiens dont le lien au flux magique a &#233;t&#233; fragilit&#233; ou bris&#233;. Ce qu'il leur apprend, comment il les r&#233;habilite, par quels moyens &mdash; cela aussi reste largement non document&#233;.</p>
+    <p>Le clerg&#233; surveille la tour. De loin. Et en silence.</p>
+  </div>
+</div>
+</div>
+<div id="page-terra-gigantum" class="page">
+<div class="content header-orc">
+  <div class="page-header">
+    <div class="page-tag">Lieux &middot; Jungle Hostile</div>
+    <h1 class="page-title color-orc">Terra Gigantum</h1>
+    <p class="page-quote">&#171; L&#224; o&#249; la nature n'a jamais appris &#224; avoir peur des hommes. &#187;</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Localisation</div><div class="info-value">Extr&#234;me sud du continent monilien &mdash; au-del&#224; de Nihil et des Plaines de Duo Amnis</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Zone non cartographi&#233;e &mdash; entr&#233;e suicidaire</div></div>
+    <div class="info-box"><div class="info-label">Pr&#233;sence humaine</div><div class="info-value">Adversus Monstra &mdash; unique avant-poste permanent</div></div>
+    <div class="info-box"><div class="info-label">Exp&#233;ditions connues</div><div class="info-value">Garivald (il y a ~100 ans) &middot; Krauss (il y a ~20 ans)</div></div>
+  </div>
+  <div class="section">
+    <p>Tout au sud du continent monilien, au-del&#224; des Plaines de Duo Amnis et de la Vall&#233;e de Nihil, le monde change. Les routes s'arr&#234;tent. L'air devient lourd, chaud, charg&#233; d'une humidit&#233; poisseuse qui colle aux v&#234;tements et aux poumons. Et la jungle commence &mdash; dense, sombre, indiff&#233;rente. Terra Gigantum.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Une Fronti&#232;re, pas une Destination</div>
+    <p>Pour les Moniliens, Terra Gigantum n'est pas un territoire &#224; conqu&#233;rir. C'est une limite. Un rappel que le monde, au-del&#224; de certaines lisi&#232;res, n'appartient pas aux hommes et n'a aucune intention de leur appartenir. Les arbres y sont d&#233;mesur&#233;s, la v&#233;g&#233;tation si dense que la lumi&#232;re du jour atteint &#224; peine le sol. Des bruits montent de partout &mdash; cris, craquements, froissements impossibles &#224; identifier &mdash; et s'arr&#234;tent net sans raison.</p>
+    <p>Tout ce qui vit l&#224;-bas est grand. Ou venimeux. Ou les deux.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Ce que l'on sait &mdash; et ce que l'on pr&#233;f&#232;re ignorer</div>
+    <p>Deux exp&#233;ditions seulement ont os&#233; s'y aventurer avec une pr&#233;paration s&#233;rieuse. La premi&#232;re fut celle de <strong class="color-gold">Salomon Garivald</strong>, il y a un si&#232;cle &mdash; qui en revint avec assez de connaissances pour &#233;tablir Adversus Monstra, et assez de cicatrices pour ne jamais y retourner.</p>
+    <p>La seconde fut celle de <strong class="color-gold">Maximilian Krauss</strong>, il y a vingt ans. Non pas une exp&#233;dition au sens propre &mdash; plut&#244;t une sentence d&#233;guis&#233;e. Krauss, condamn&#233; pour crimes magiques, fut aveugl&#233; par ordre de l'&#201;glise puis banni dans Terra Gigantum. Une ex&#233;cution &#224; peine habill&#233;e en exil.</p>
+    <p>Il revint un mois plus tard. Seul. Vivant.</p>
+    <p>Ses informations sur la jungle furent jug&#233;es insuffisantes par le Haut Clerg&#233; qui l'interrogea. Krauss r&#233;pondit : <em>&#171; Vous m'avez enlev&#233; mon dernier oeil fonctionnel, et vous voulez une &#233;tude topographique ? &#187;</em></p>
+    <p>Les archives notent qu'il fut graci&#233; peu apr&#232;s. Il occupe depuis un poste de professeur &#224; l'Acad&#233;mie d'Hyacenthus. Ce qu'il enseigne exactement, et ce qu'il a vraiment vu dans la jungle, ne figure dans aucun registre officiel.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Trois Points Notables</div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(59,31,10,0.5)"><span class="trait-name color-orc">Ruines de Nimis Longe</span><span class="trait-type">Est de la lisi&#232;re</span></div>
+      <div class="trait-body"><p>Vestiges d'une tentative de colonisation men&#233;e il y a cent trente ans. Une ville qui devait devenir le premier avant-poste humain dans la jungle. Elle tint moins de deux ans. Ce qu'il en reste aujourd'hui est &#224; moiti&#233; englouti par la v&#233;g&#233;tation, &#224; moiti&#233;... autre chose. Les rares &#233;claireurs qui s'en sont approch&#233;s n'ont pas envie d'en parler.</p></div>
+    </div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(59,31,10,0.5)"><span class="trait-name color-orc">Lac Gigant Scyphum</span><span class="trait-type">Centre &mdash; plateau montagneux</span></div>
+      <div class="trait-body"><p>Un grand canyon et un plateau montagneux barrent l'acc&#232;s aux profondeurs de la jungle. C'est l&#224; que s'est form&#233; le Lac Gigant Scyphum &mdash; une &#233;tendue d'eau immobile, d'un vert profond, dont aucune exp&#233;dition n'a encore atteint l'autre rive.</p></div>
+    </div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(59,31,10,0.5)"><span class="trait-name color-orc">Adversus Monstra</span><span class="trait-type">Ouest &mdash; sous la Vall&#233;e de Nihil</span></div>
+      <div class="trait-body"><p>Petite forteresse austère, mal approvisionnée, bâtie pour tenir plutôt que pour vivre. Fondée par Garivald lui-même, elle survit depuis un siècle grâce à la rotativité de ses garnisons. Être envoyé à Adversus Monstra, c'est recevoir un message clair : soit on vous oublie, soit on vous redresse. On ne défile pas, on ne s'entraîne pas à la parade. On surveille, on répare, on tient &mdash; et on espère que ce qui rôde cette nuit-là ne franchira pas le mur.</p></div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="page-kodai" class="page">
+<div class="content header-elf">
+  <div class="page-header">
+    <div class="page-tag">Lieux &middot; For&#234;t Ancienne</div>
+    <h1 class="page-title color-elf">Kodai no Mori</h1>
+    <p class="page-quote">&#171; Viridis Expansum pour les Moniliens &mdash; La Grande Verte. &#187;</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Localisation</div><div class="info-value">Est du continent monilien &mdash; au-del&#224; d'Hyacenthus</div></div>
+    <div class="info-box"><div class="info-label">Habitants</div><div class="info-value">Les Elfes &mdash; et les cr&#233;atures de la for&#234;t</div></div>
+    <div class="info-box"><div class="info-label">Acc&#232;s</div><div class="info-value">Sur invitation uniquement &mdash; la for&#234;t se souvient de qui entre</div></div>
+    <div class="info-box"><div class="info-label">Nom Monilien</div><div class="info-value">Viridis Expansum &mdash; &#171; La Grande Verte &#187;</div></div>
+  </div>
+  <div class="section">
+    <p>&#192; l'est du territoire monilien, l&#224; o&#249; les routes pav&#233;es s'effacent et o&#249; les cartes des cartographes humains deviennent vagues et prudentes, commence Kodai no Mori. La ville d'Hyacenthus en marque la lisi&#232;re &mdash; au-del&#224;, c'est un autre monde.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Une For&#234;t sans Limite Visible</div>
+    <p>Personne ne conna&#238;t les fronti&#232;res exactes de Kodai no Mori. Elle s'&#233;tend sur des kilom&#232;tres et des kilom&#232;tres dans toutes les directions, changeant de visage sans pr&#233;venir. Une clairi&#232;re baign&#233;e d'une lumi&#232;re dor&#233;e laisse soudainement place &#224; un bosquet noueux et sombre o&#249; la lumi&#232;re ne descend plus. Des rivi&#232;res cristallines traversent des prairies couvertes de fleurs qui n'existent nulle part ailleurs, puis disparaissent sous des racines vieilles comme le monde. Des arbres colossaux &mdash; certains si larges qu'une dizaine d'hommes se tenant la main n'en feraient pas le tour &mdash; c&#244;toient des sous-bois denses et silencieux o&#249; m&#234;me le vent semble h&#233;siter &#224; entrer.</p>
+    <p>L'&#233;cosyst&#232;me y est extraordinaire. Des cr&#233;atures que les naturalistes moniliens ne savent pas nommer glissent entre les troncs. Des cerfs aux bois lumineux paissent dans les clairi&#232;res au cr&#233;puscule. Des oiseaux au plumage impossible chantent dans des tonalit&#233;s que l'oreille humaine per&#231;oit comme une m&#233;lodie organis&#233;e &mdash; et peut-&#234;tre l'est-elle. Dans les zones plus sombres, d'autres choses vivent, moins bienveillantes, moins enclines &#224; laisser passer les curieux.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Les Arbres-M&#232;res</div>
+    <p>Au coeur de la for&#234;t, diss&#233;min&#233;s selon une logique que seuls les Elfes comprennent, se dressent les Arbres-M&#232;res. Ils ressemblent aux autres arbres &mdash; en plus grand, en plus ancien, en plus <em>pr&#233;sent</em>. On dit que leur &#233;corce est ti&#232;de au toucher, m&#234;me en hiver. Que leurs racines bougent, imperceptiblement, comme une respiration. C'est d'eux que naissent les Elfes, lentement, sur des d&#233;cennies. C'est &#224; eux qu'ils reviennent mourir. Et c'est pour eux que Kodai no Mori existe.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Vivre dans les Arbres</div>
+    <p>Les Elfes n'ont pas de capitale, pas de cit&#233;, pas de place centrale o&#249; le pouvoir se concentre. Ils vivent o&#249; ils le souhaitent, et o&#249; ils le souhaitent change. Leurs demeures sont construites directement dans les arbres &mdash; non pas arrach&#233;es &#224; eux, mais int&#233;gr&#233;es avec leur accord. Un Elfe demande &#224; l'arbre s'il accepte qu'on vive en lui, qu'on en modifie la structure. Les arbres, selon les Elfes, ne trouvent pas cela d&#233;rangeant. Ils se trouvent beaux, et utiles ainsi.</p>
+    <p>Un voyageur humain qui traverserait Kodai no Mori ne verrait rien de tout cela &mdash; les habitations elfiques se fondent dans le bois, le feuillage, la mousse. On peut passer sous une maison sans le savoir.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Entrer dans la For&#234;t</div>
+    <p>Kodai no Mori n'est pas ferm&#233;e. Mais elle se souvient de qui entre. Un visiteur invit&#233; par un Elfe sera guid&#233;, prot&#233;g&#233;, accueilli avec la r&#233;serve courtoise propre au peuple de la for&#234;t. Un intrus &mdash; conscient ou non &mdash; sera reconduit &#224; la sortie. Pas brusquement, pas violemment : il entrera, marchera, et r&#233;alisera qu'il est d&#233;j&#224; dehors. Sans savoir comment. Sans souvenir pr&#233;cis du chemin.</p>
+    <div class="advert" style="border-color:var(--orc-red)">
+      <div class="advert-title" style="color:var(--orc-light)">Pour ceux qui persistent</div>
+      Les Elfes n'en parlent pas. Les rares humains qui ont tent&#233; d'en parler manquent de d&#233;tails pr&#233;cis &mdash; comme si leurs souvenirs avaient &#233;t&#233; soigneusement d&#233;barrass&#233;s de l'essentiel.
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">Viridis Expansum</div>
+    <p>C'est le nom que les Moniliens donnent &#224; la for&#234;t &mdash; &#171; La Grande Verte &#187;. Un nom qui dit tout de leur rapport &#224; elle : de l'admiration prudente, une reconnaissance de sa vastitude, et cette distance respectueuse qu'on garde face &#224; quelque chose qu'on ne contr&#244;le pas et qu'on pr&#233;f&#232;re ne pas trop chercher &#224; comprendre.</p>
+    <p>Certains clercs moniliens voient en Kodai no Mori une manifestation de Serath &mdash; le flux, le vivant, le cycle. Les Elfes, s'ils entendent cette interpr&#233;tation, ne la corrigent pas. Ils ne la valident pas non plus.</p>
+  </div>
+</div>
+</div>
+<div id="page-turris-nebularum" class="page">
+<div class="content header-mon">
+  <div class="page-header">
+    <div class="page-tag">Lieux &middot; Tour Myst&#233;rieuse</div>
+    <h1 class="page-title color-gold">Turris Nebularum</h1>
+    <p class="page-quote">&#171; La Tour des Brumes. Ou la Tour des Estrophi&#233;s, selon &#224; qui vous posez la question. &#187;</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Localisation</div><div class="info-value">Lac Bruma &mdash; pied du Mont Falco Alae, Monilia</div></div>
+    <div class="info-box"><div class="info-label">Propri&#233;taire</div><div class="info-value">Maximilian Krauss</div></div>
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Ancienne &mdash; origines inconnues</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Surveill&#233;e discr&#232;tement par le clerg&#233; monilien</div></div>
+  </div>
+
+  <div class="section">
+    <p>Au pied du Mont Falco Alae, l&#224; o&#249; les pics enneig&#233;s se mirent dans les eaux calmes du Lac Bruma, se dresse une tour ancienne. Personne ne sait vraiment qui l'a b&#226;tie, ni quand, ni pourquoi. Les sentinelles du clerg&#233; monilien l'observaient discrètement depuis des ann&#233;es, ne sachant qu'en penser. Puis Maximilian Krauss en fit l'acquisition, par le biais d'une obscure loi fonci&#232;re, et la question changea de nature.</p>
+    <p>Il la rebaptisa <strong class="color-gold">Turris Nebularum</strong> &mdash; la Tour des Brumes. Les brumes du lac l'enveloppent en effet presque en permanence, lui donnant une silhouette fantomatique aux aurores.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">La Tour des Estrophi&#233;s</div>
+    <p>Le surnom populaire en dit long sur ce que Krauss y fait. Il re&#231;oit les laiss&#233;s-pour-compte de la magie &mdash; ceux que personne d'autre ne veut regarder en face. Mages ayant perdu l'usage de leurs membres lors d'accidents ou d'anomalies. Praticiens dont le lien au flux magique a &#233;t&#233; bris&#233; ou fragilit&#233; par des erreurs, des catastrophes, des punitions. Victimes des failles entre la magie et le corps humain que ni Monilia ni Haern ne savent comment traiter.</p>
+    <p>Ce que Krauss leur apprend, comment il les r&#233;habilite, quelles m&#233;thodes il emploie &mdash; rien de tout cela ne figure dans aucun registre officiel. Ses anciens r&#233;sidents, quand on les trouve et qu'on les interroge, sont avares de d&#233;tails. Reconnaissants, mais avares.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">La Tour elle-m&#234;me</div>
+    <p>L'&#233;difice est ancien &mdash; plus ancien, selon certains &#233;rudits d'Hyacenthus, que n'importe quelle construction monilienne connue. Ses pierres ne correspondent &#224; aucune technique de taille r&#233;pertori&#233;e. Son sommet dispara&#238;t parfois dans les brumes du lac m&#234;me par temps clair. Et depuis que Krauss s'y est install&#233;, les sentinelles du clerg&#233; not&#233;rent quelque chose d'&#233;trange : les anomalies magiques semblent l&#233;g&#232;rement moins fr&#233;quentes dans un rayon de quelques kilom&#232;tres autour du Lac Bruma.</p>
+    <p>Personne n'a demand&#233; &#224; Krauss d'expliquer pourquoi. Personne n'a vraiment envie de conna&#238;tre la r&#233;ponse.</p>
   </div>
 </div>
 </div>
