@@ -178,23 +178,32 @@ ul.styled li strong { color:var(--gold2); }
       </div>
     </div>
     <div class="nav-group">
+      <div class="nav-group-header" onclick="toggleGroup('histoire')">
+        <span>Histoire</span><span class="nav-arrow" id="arrow-histoire">▸</span>
+      </div>
+      <div class="nav-group-items" id="group-histoire">
+        <a class="nav-item" onclick="showPage('guerre-dents-calmes')"><span class="nav-dot" style="background:var(--orc-red)"></span> La Guerre des Dents Calmes</a>
+      </div>
+    </div>
+    <div class="nav-group">
       <div class="nav-group-header" onclick="toggleGroup('monde')">
         <span>Le Monde</span><span class="nav-arrow" id="arrow-monde">▸</span>
       </div>
       <div class="nav-group-items" id="group-monde">
+        <div class="nav-subtitle">— Général —</div>
         <a class="nav-item" onclick="showPage('chronologie')"><span class="nav-dot"></span> Chronologie</a>
         <a class="nav-item" onclick="showPage('la-breche')"><span class="nav-dot"></span> La Brèche</a>
         <a class="nav-item" onclick="showPage('antagoniste')"><span class="nav-dot"></span> L'Antagoniste</a>
-      </div>
-    </div>
-    <div class="nav-group">
-      <div class="nav-group-header" onclick="toggleGroup('nations')">
-        <span>Nations</span><span class="nav-arrow" id="arrow-nations">▸</span>
-      </div>
-      <div class="nav-group-items" id="group-nations">
+        <div class="nav-subtitle">— Nations —</div>
         <a class="nav-item" onclick="showPage('monilia')"><span class="nav-dot" style="background:var(--mon-light)"></span> Monilia</a>
         <a class="nav-item" onclick="showPage('haern')"><span class="nav-dot" style="background:var(--haern-light)"></span> Haern</a>
         <a class="nav-item" onclick="showPage('curico')"><span class="nav-dot" style="background:var(--curico-light)"></span> Curico</a>
+        <div class="nav-subtitle">— Lieux · Monilia —</div>
+        <a class="nav-item" onclick="showPage('kodai')"><span class="nav-dot" style="background:var(--elf-light)"></span> Kodai no Mori</a>
+        <a class="nav-item" onclick="showPage('terra-gigantum')"><span class="nav-dot" style="background:var(--orc-red)"></span> Terra Gigantum</a>
+        <a class="nav-item" onclick="showPage('turris-nebularum')"><span class="nav-dot" style="background:var(--gold)"></span> Turris Nebularum</a>
+        <div class="nav-subtitle">— Lieux · Neutre —</div>
+        <a class="nav-item" onclick="showPage('dents-calmes')"><span class="nav-dot" style="background:var(--curico-light)"></span> Les Dents Calmes</a>
       </div>
     </div>
     <div class="nav-group">
@@ -219,18 +228,10 @@ ul.styled li strong { color:var(--gold2); }
         <a class="nav-item" onclick="showPage('gemma-in-caeno')"><span class="nav-dot" style="background:var(--mon-light)"></span> Gemma in Caeno</a>
         <a class="nav-item" onclick="showPage('magister')"><span class="nav-dot" style="background:var(--mon-light)"></span> Les Magister</a>
         <a class="nav-item" onclick="showPage('resurrection')"><span class="nav-dot" style="background:var(--mon-light)"></span> Résurrection — Règles &amp; Lois</a>
+        <a class="nav-item" onclick="showPage('commerce')"><span class="nav-dot" style="background:var(--gold)"></span> Le Commerce Monilia/Haern</a>
+        <a class="nav-item" onclick="showPage('neart-a-staigh')"><span class="nav-dot" style="background:var(--haern-light)"></span> Ordre de Neart a-staigh</a>
         <a class="nav-item" onclick="showPage('hanses')"><span class="nav-dot" style="background:var(--gold)"></span> Les Hanses</a>
         <a class="nav-item" onclick="showPage('magie')"><span class="nav-dot"></span> La Magie</a>
-      </div>
-    </div>
-    <div class="nav-group">
-      <div class="nav-group-header" onclick="toggleGroup('lieux')">
-        <span>Lieux</span><span class="nav-arrow" id="arrow-lieux">▸</span>
-      </div>
-      <div class="nav-group-items" id="group-lieux">
-        <a class="nav-item" onclick="showPage('kodai')"><span class="nav-dot" style="background:var(--elf-light)"></span> Kodai no Mori</a>
-        <a class="nav-item" onclick="showPage('terra-gigantum')"><span class="nav-dot" style="background:var(--orc-red)"></span> Terra Gigantum</a>
-        <a class="nav-item" onclick="showPage('turris-nebularum')"><span class="nav-dot" style="background:var(--gold)"></span> Turris Nebularum</a>
       </div>
     </div>
     <div class="nav-group">
@@ -258,6 +259,7 @@ ul.styled li strong { color:var(--gold2); }
         <div class="nav-subtitle">— Haern —</div>
         <a class="nav-item" onclick="showPage('pnj-loup')"><span class="nav-dot" style="background:var(--haern-light)"></span> Le Loup</a>
         <a class="nav-item" onclick="showPage('pnj-jon')"><span class="nav-dot" style="background:var(--haern-light)"></span> Jon McNamara</a>
+        <a class="nav-item" onclick="showPage('pnj-diarmad')"><span class="nav-dot" style="background:var(--haern-light)"></span> Diarmad Mac Neart</a>
         <div class="nav-subtitle">— Curico —</div>
         <a class="nav-item" onclick="showPage('pnj-silvio')"><span class="nav-dot" style="background:var(--curico-light)"></span> Silvio Benesta</a>
         <a class="nav-item" onclick="showPage('pnj-veuve')"><span class="nav-dot" style="background:var(--curico-light)"></span> La Veuve de la Brèche</a>
@@ -561,6 +563,11 @@ ul.styled li strong { color:var(--gold2); }
       <tr><td>Les Justicars</td><td>Enquêteurs du clergé. Interviennent en cas d'usage dangereux de la magie.</td></tr>
       <tr><td>Administration Civile</td><td>Fait tourner la machine du royaume. Méticuleuse et omniprésente.</td></tr>
     </table>
+    <div class="section-subtitle">Le Pouvoir Local</div>
+    <p>Gouverner un royaume de plusieurs millions d'habitants depuis les tours d'Amethystus demande une infrastructure solide. L'Église l'a compris depuis longtemps — la foi ne suffit pas à réparer une route ou à percevoir les impôts.</p>
+    <p>Dans les grandes villes, le pouvoir local repose sur un système à deux têtes. Un <strong class="color-mon">Préfet Civil</strong> — nommé par l'administration centrale — gère les affaires pratiques du quotidien : taxes, infrastructure, justice ordinaire, registres. Au-dessus de lui, un <strong class="color-mon">Doyen</strong> ou <strong class="color-mon">Recteur</strong> clérical supervise, oriente, et peut invalider toute décision jugée contraire à la doctrine des Cinq. Le civil gère. Le religieux veille.</p>
+    <p>Dans les villages et communes plus modestes, cette séparation disparaît par nécessité. Le prêtre local cumule les deux rôles — il bénit les mariages, règle les disputes de voisinage, collecte les contributions pour le clergé central, et représente à lui seul l'autorité de Monilia dans sa communauté. Beaucoup le font avec dévouement. Certains avec un peu trop d'enthousiasme.</p>
+    <p>La tension entre ces deux légitimités — l'efficacité civile et l'autorité religieuse — est l'une des frictions les plus constantes de la vie politique monilienne. Un Préfet ambitieux et un Doyen intransigeant dans la même ville, c'est une source inépuisable de complications discrètes, de rapports contradictoires envoyés à Amethystus, et de décisions qui traînent des mois avant d'être tranchées.</p>
   </div>
   <div class="section">
     <div class="section-title">Forces &amp; Faiblesses</div>
@@ -696,6 +703,15 @@ ul.styled li strong { color:var(--gold2); }
     <p><em>Un mage calme et utile peut gagner le respect. Un mage imprudent récolte des primes sur sa tête et l'attention des Chasseurs.</em></p>
   </div>
   <div class="section">
+    <div class="section-title">Le Pouvoir Local</div>
+    <p>À Haern, pas de double tête, pas de supervision religieuse, pas d'ambiguïté théologique. Le pouvoir local est une extension directe des Six Familles — clair, pragmatique, et assumé.</p>
+    <p>Dans les grandes villes, un <strong class="color-haern">Commissaire</strong> nommé par la Famille dominante de la région gère l'administration au quotidien : taxes, infrastructure, justice civile, ordre public. Il ne rend de comptes qu'à sa Famille. Pas à une autorité centrale abstraite, pas à un clergé, pas à un idéal — à des gens précis, avec des intérêts précis, qui attendent des résultats précis.</p>
+    <p>Dans les villes moyennes, le <strong class="color-haern">Shérif</strong> cumule souvent les deux casquettes — maintien de l'ordre et administration locale. C'est lui qui perçoit les contributions pour la Famille, tranche les litiges commerciaux et représente l'autorité dans sa juridiction. Autoritaire, pragmatique, loyal à son patron avant tout.</p>
+    <p>Dans les communes frontalières et les avant-postes miniers, la structure se délite. Un Shérif quand la Famille a jugé utile d'en nommer un. Sinon, c'est le grand propriétaire local, le contremaître de mine, l'ancien soldat reconverti — celui qui a les moyens ou la carrure pour tenir le coin. Les Familles ferment les yeux tant que les taxes arrivent et que rien ne dégénère.</p>
+    <p>La vraie complication survient quand deux Familles ont des intérêts dans la même ville. Deux Commissaires qui se regardent en chiens de faïence, deux réseaux qui se croisent, deux loyautés incompatibles sous le même toit administratif. Pas de doctrine pour trancher, pas d'arbitre neutre — juste un rapport de force qui peut durer des années avant que l'une des deux cède.</p>
+  </div>
+
+  <div class="section">
     <div class="section-title">Relations Extérieures</div>
     <table class="stat-table">
       <tr><td>Monilia</td><td>Ancienne ennemie. Relations tendues mais stabilisées. Méfiance idéologique profonde.</td></tr>
@@ -773,7 +789,7 @@ ul.styled li strong { color:var(--gold2); }
     </div>
     <div class="trait-card">
       <div class="trait-header" style="background:rgba(60,20,80,0.5)"><span class="trait-name" style="color:#b39ddb">Le Serpent</span><span class="trait-type">N'existe pas officiellement</span></div>
-      <div class="trait-body"><p class="trait-flavor">On en parle à voix basse : assassinats impeccables, réseaux souterrains, manipulation. Si vous le croisez, c'est que quelque chose a déjà très mal tourné.</p></div>
+      <div class="trait-body"><p class="trait-flavor">Personne ne parle du Serpent.</p></div>
     </div>
   </div>
   <div class="section">
@@ -790,6 +806,17 @@ ul.styled li strong { color:var(--gold2); }
     <div class="section-title">La Langue — Le Curican</div>
     <p>Ici, on parle le <em>curican</em> — un dialecte bâtard né du monilien, de l'haernien, de mots orcs et gobelins, et d'un tiers de jargon maritime. Tout le monde le parle mal. Tout le monde le comprend à merveille.</p>
   </div>
+  <div class="section">
+    <div class="section-title">Le Pouvoir Local</div>
+    <p>Curico ne ressemble à aucune autre ville d'Orhein. Pas de clergé pour superviser, pas de Famille pour nommer ses hommes, pas d'autorité centrale pour trancher. Ce qui tient la ville debout, c'est un équilibre tacite entre des intérêts qui ont tous besoin que ça fonctionne.</p>
+    <p>Le visage officiel du pouvoir, c'est le <strong class="color-curico">Conseil des Quais</strong> — une assemblée de représentants des grandes guildes marchandes, des capitaines de port et des propriétaires fonciers importants. Ils votent les règlements portuaires, fixent les taxes d'amarrage, tranchent les litiges commerciaux ouverts. Ils jouent leur rôle sérieusement. Ce qu'ils ne font pas, c'est décider de quoi que ce soit d'important sans l'accord implicite des Cinq Doigts. Ils le savent. Ils font semblant de ne pas le savoir.</p>
+    <p>En dessous, Curico est découpée en quartiers informels — le vieux port, les chantiers navals, le quartier des épices, les ruelles hautes. Chaque quartier a son <strong class="color-curico">Capitaine</strong> — pas un titre officiel, juste quelqu'un que tout le monde reconnaît comme l'autorité de proximité. Parfois désigné discrètement par l'Alligator. Parfois simplement le type qui a su s'imposer. Il règle les conflits de voisinage, protège son territoire, remonte les problèmes quand ça dépasse ses compétences. En échange, il prend sa part sur le commerce local. Tout le monde sait comment ça marche. Personne ne le dit à voix haute.</p>
+    <p>L'ordre visible est assuré par les <strong class="color-curico">Gardes Portuaires</strong> — officiellement au service du Conseil des Quais, officieusement recrutés et payés par l'Alligator. Assez présents pour que les marchands étrangers se sentent en sécurité. Pas assez pour gêner les affaires qui n'ont pas besoin d'être vues.</p>
+    <p>Et en dessous de tout ça — les ruelles, les caves, les arrière-salles. Là où personne ne gouverne officiellement. Là où les vrais accords se concluent, où les dettes se règlent, où les gens disparaissent proprement.</p>
+    <p>Ce qui fait tenir tout ça, c'est une règle simple que personne n'a jamais écrite : les marchands veulent que le port tourne, les Doigts veulent que l'argent coule, les Capitaines veulent leur tranquillité, les gardes veulent leur salaire. Tant que chacun respecte les intérêts des autres, la machine tourne sans bruit.</p>
+    <p><em>Le jour où quelqu'un casse l'équilibre — là, les Cinq Doigts cessent de faire semblant de ne pas exister.</em></p>
+  </div>
+
   <div class="section">
     <div class="section-title">Relations Extérieures</div>
     <table class="stat-table">
@@ -1863,36 +1890,153 @@ ul.styled li strong { color:var(--gold2); }
 <div id="page-pnj-sebastian" class="page">
 <div class="content header-mon">
   <div class="page-header">
-    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
-    <h1 class="page-title color-mon">Sebastián Pierran d'Ysmandis</h1>
-    <p class="page-quote">« Le plus grand barde de Monilia. »</p>
+    <div class="page-tag">PNJ Notables &middot; L&eacute;gendes d'Orhein</div>
+    <h1 class="page-title color-mon">Sebasti&aacute;n Pierran d'Ysmandis</h1>
+    <p class="page-quote">&#171; Le plus grand barde de Monilia. &#187;</p>
   </div>
   <div class="info-grid">
     <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Monilia</div></div>
-    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Vivant — célèbre dans tout le royaume</div></div>
-    <div class="info-box full"><div class="info-label">Troupe</div><div class="info-value">Igni e Aqua — troupe ambulante (« le Feu et l'Eau »)</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Vivant &mdash; c&eacute;l&egrave;bre dans tout le royaume</div></div>
+    <div class="info-box full"><div class="info-label">Troupe</div><div class="info-value">Igni e Aqua &mdash; troupe ambulante (&#171; le Feu et l'Eau &#187;)</div></div>
   </div>
   <div class="section">
-    <p>Il y a des artistes que l'on apprécie, et il y a Sebastián Pierran d'Ysmandis. Dans tout Monilia, des tavernes d'Ad Contritio aux salons feutrés d'Amethystus, son nom seul suffit à remplir une salle. Maître incontesté de la scène, il sillonne le royaume à la tête de sa troupe ambulante, <strong class="color-mon">Igni e Aqua</strong> — « le Feu et l'Eau » — réputée pour ses spectacles aussi flamboyants que bouleversants.</p>
-    <p>On dit que ses représentations mêlent musique, illusion et une pointe de magie liturgique savamment dosée, dans le respect des codes moniliens. Là où d'autres bardes amusent, Sebastián émeut, transporte, marque les esprits. Sa réputation dépasse les frontières : même à Curico, on s'arrache les billets quand la rumeur annonce son passage.</p>
+    <p>Il y a des artistes que l'on appr&eacute;cie, et il y a Sebasti&aacute;n Pierran d'Ysmandis. Dans tout Monilia, des tavernes d'Ad Contritio aux salons feutr&eacute;s d'Amethystus, son nom seul suffit &agrave; remplir une salle. Ma&icirc;tre incontest&eacute; de la sc&egrave;ne, il sillonne le royaume &agrave; la t&ecirc;te de sa troupe ambulante, <strong class="color-mon">Igni e Aqua</strong> &mdash; &#171; le Feu et l'Eau &#187; &mdash; r&eacute;put&eacute;e pour ses spectacles aussi flamboyants que bouleversants.</p>
+    <p>On dit que ses repr&eacute;sentations m&ecirc;lent musique, illusion et une pointe de magie liturgique savamment dos&eacute;e, dans le respect des codes moniliens. L&agrave; o&ugrave; d'autres bardes amusent, Sebasti&aacute;n &eacute;meut, transporte, marque les esprits. Sa r&eacute;putation d&eacute;passe les fronti&egrave;res : m&ecirc;me &agrave; Curico, on s'arrache les billets quand la rumeur annonce son passage.</p>
+    <p style="font-style:italic;color:var(--text2);">Il joue les cantiques pour les Paladins quand il le faut. Ce n'est pas sa musique pr&eacute;f&eacute;r&eacute;e &mdash; mais m&ecirc;me les &eacute;vang&eacute;listes ont besoin de se d&eacute;tendre.</p>
+  </div>
+
+  <div class="section">
+    <div class="mystery-box">
+      <div class="mystery-title">&#8856; Section Verrouill&eacute;e &mdash; Ce que peu savent</div>
+      <p style="color:var(--text2);margin-bottom:16px;">Certaines v&eacute;rit&eacute;s ne se r&eacute;v&egrave;lent qu'&agrave; ceux qui connaissent le mot juste...</p>
+      <div id="sebastian-lock">
+        <input type="password" id="sebastian-pass" placeholder="Mot de passe..." style="background:var(--bg);border:1px solid var(--border2);border-radius:3px;padding:10px 14px;color:var(--text);font-family:'Crimson Pro',serif;font-size:15px;width:200px;margin-right:8px;" onkeypress="if(event.key==='Enter'){{unlockSecret('sebastian-pass','sebastian-secret','sebastian-error','Synne')}}" />
+        <button onclick="unlockSecret('sebastian-pass','sebastian-secret','sebastian-error','Synne')" style="background:rgba(124,77,170,0.3);border:1px solid #7c4daa;border-radius:3px;padding:10px 20px;color:#b39ddb;font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">D&eacute;verrouiller</button>
+        <p id="sebastian-error" style="display:none;color:var(--orc-light);font-size:14px;margin-top:10px;">Mot de passe incorrect.</p>
+      </div>
+    </div>
+    <div id="sebastian-secret" style="display:none;">
+      <p>Sebasti&aacute;n n'est pas qu'un barde. Par une d&eacute;votion totale et un amour pur et sincère, il a acc&eacute;d&eacute; aux pouvoirs divins des Cinq en dehors de tout canal officiel &mdash; sans l'onction du Pontife, sans l'institution. Un paladin que personne ne reconna&icirc;t comme tel, qui joue des cantiques pour des Paladins qui ne savent pas ce qu'il est.</p>
+      <div class="section-subtitle color-mon">Lana</div>
+      <p>La source de ce don : <strong>Lana</strong>, percussionniste muette de la troupe Igni e Aqua. Lana est un nom que Sebasti&aacute;n lui a donn&eacute; &mdash; son vrai nom est <strong class="color-haern">Synne Caldrek</strong>, premi&egrave;re h&eacute;riti&egrave;re de la famille Caldrek, la famille de S&eacute;curit&eacute; d'Haern.</p>
+      <p>&Agrave; l'adolescence, ses fr&egrave;res et s&oelig;urs ont fait appel &agrave; un assassin pour l'&eacute;liminer et prendre sa place &agrave; la t&ecirc;te de la famille. L'empoisonnement a failli r&eacute;ussir &mdash; Synne a survécu, mais le poison lui a pris sa voix et l'a laiss&eacute;e faible et errante. C'est ainsi que Sebasti&aacute;n l'a trouv&eacute;e.</p>
+      <p>Il lui a promis de la prot&eacute;ger. Il tient cette promesse en la cachant en pleine vue, dans sa troupe itinérante, sous un nom d'emprunt. Elle qui a tout perdu vit maintenant dans la musique &mdash; sans voix, mais avec les percussions.</p>
+      <p style="font-style:italic;color:var(--text2);">Et lui qui vit par les mots, la voix et la chanson, est tomb&eacute; fou amoureux d'une femme qui ne peut plus parler.</p>
+    </div>
   </div>
 </div>
 </div>
 <div id="page-pnj-hortense" class="page">
 <div class="content header-mon">
   <div class="page-header">
-    <div class="page-tag">PNJ Notables · Légendes d'Orhein</div>
+    <div class="page-tag">PNJ Notables &middot; L&eacute;gendes d'Orhein</div>
     <h1 class="page-title color-mon">Hortense Leona</h1>
-    <p class="page-quote">« La Maîtresse de l'Ordre · Héroïne de l'Île du Nord. »</p>
+    <p class="page-quote">&#171; La Ma&icirc;tresse de l'Ordre &middot; L'Indompt&eacute;e de l'&Icirc;le du Nord. &#187;</p>
   </div>
   <div class="info-grid">
     <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Monilia</div></div>
-    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Morte au combat — Guerre des Dents Calmes</div></div>
-    <div class="info-box full"><div class="info-label">Titre</div><div class="info-value">Grande Cheffe Paladin, Maîtresse de l'Ordre</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Morte au combat &mdash; Guerre des Dents Calmes</div></div>
+    <div class="info-box"><div class="info-label">Titre</div><div class="info-value">Grande Cheffe Paladin, Ma&icirc;tresse de l'Ordre</div></div>
+    <div class="info-box full"><div class="info-label">Surnom l&eacute;gendaire</div><div class="info-value">L'Indompt&eacute;e</div></div>
   </div>
   <div class="section">
-    <p>Le nom d'Hortense Leona se prononce avec respect dans les rangs des Paladins de Monilia. Grande Cheffe de l'Ordre durant la Guerre des Dents Calmes, elle incarnait tout ce que la foi monilienne révère : la discipline, le sacrifice, le courage juste cher au dieu Kaelor.</p>
-    <p>Sa légende s'est scellée sur <strong class="color-mon">l'Île du Nord</strong>. Encerclée avec une simple unité d'apprentis — des gamins à peine formés — elle tint la position <strong>trois jours et trois nuits</strong> face à deux bataillons haerniens appuyés par une unité de Chasseurs d'élite. Aucun ne survécut. Mais leur résistance acharnée est devenue un symbole : celui d'une poignée de croyants qui refusèrent de céder, même face à l'acier et la poudre de Haern.</p>
+    <p>Le nom d'Hortense Leona se prononce avec respect dans les rangs des Paladins de Monilia. Grande Cheffe de l'Ordre durant la Guerre des Dents Calmes, elle incarnait tout ce que la foi monilienne r&eacute;v&egrave;re : la discipline, le sacrifice, le courage juste cher au dieu Kaelor.</p>
+    <p>Sa l&eacute;gende s'est scell&eacute;e sur <strong class="color-mon">l'&Icirc;le du Nord</strong>. Encercl&eacute;e avec une simple unit&eacute; d'apprentis &mdash; des gamins &agrave; peine form&eacute;s &mdash; elle tint la position <strong>trois jours et trois nuits</strong> face &agrave; deux bataillons haerniens appuy&eacute;s par une unit&eacute; de Chasseurs d'&eacute;lite. Aucun ne survécut. Mais leur r&eacute;sistance acharn&eacute;e est devenue un symbole : celui d'une poign&eacute;e de croyants qui refus&egrave;rent de c&eacute;der, m&ecirc;me face &agrave; l'acier et la poudre de Haern.</p>
+    <p>Depuis, on l'appelle <em>L'Indompt&eacute;e</em>. Son nom v&eacute;ritable appartient aux archives. Son surnom appartient &agrave; Monilia tout enti&egrave;re.</p>
+  </div>
+  <div class="section">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div>
+        <div class="section-subtitle color-mon">Tres Dies, Tres Noctes</div>
+        <p style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:12px;">Chant liturgique des Paladins &mdash; chant&eacute; lors de la Vigilia Rupturae</p>
+        <div style="border-left:3px solid var(--mon-purple);padding:16px 20px;background:rgba(74,35,90,0.06);border-radius:0 3px 3px 0;font-style:italic;color:var(--text);line-height:2;font-size:14px;">
+          Cum aurora surgit super aquas grises,<br>
+          Et ventus portat sal et ferrum,<br>
+          Memento eorum quos nox abstulit,<br>
+          Erectos super petram, contra mare.<br><br>
+          Iuvenes erant, pauci erant,<br>
+          Manus trementes sub armis frigidis,<br>
+          Dixit &mdash; <em>in oculos meos aspicite,</em><br>
+          <em>Kaelor nos videt. Fidem tenete.</em><br><br>
+          <em>Et insula tenuit,<br>
+          Tres dies, tres noctes,<br>
+          Contra ferrum et pulverem,<br>
+          Contra aestum et oblivionem,<br>
+          Indomita<br>
+          Non flexit.</em><br><br>
+          Secunda die tormenta tonaverunt,<br>
+          Tertia nebula omnia absorbuit,<br>
+          Venatores quaesiverunt &mdash; non invenerunt<br>
+          Nisi silentium, et saxa, et nos.<br><br>
+          Non postulavit ut superstites essent,<br>
+          Postulavit ut non cederent,<br>
+          Sunt mortui qui vivere pergunt,<br>
+          In gutture eorum qui cantare sciunt.<br><br>
+          <em>Et insula tenuit,<br>
+          Tres dies, tres noctes,<br>
+          Contra ferrum et pulverem,<br>
+          Contra aestum et oblivionem,<br>
+          Indomita<br>
+          Non flexit.</em><br><br>
+          Ergo oculos tolle cum omnia vacillant,<br>
+          Cum fides titubat et dubium venit,<br>
+          Femina et pueri in insula,<br>
+          Mundum tenuerunt &mdash; memento.<br><br>
+          <em>Et insula tenuit,<br>
+          Tres dies, tres noctes,<br>
+          Contra ferrum et pulverem,<br>
+          Contra aestum et oblivionem,<br>
+          Indomita<br>
+          Non flexit.</em>
+          <span style="display:block;margin-top:12px;font-size:11px;color:var(--text3);font-style:normal;letter-spacing:0.05em;">— Canticum Insulae Borealis, tradition liturgique monilienne</span>
+        </div>
+      </div>
+      <div>
+        <div class="section-subtitle color-mon">La Ballade de l'Indompt&eacute;e</div>
+        <p style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:12px;">Traduite et interpr&eacute;t&eacute;e par Sebasti&aacute;n Pierran d'Ysmandis</p>
+        <div style="border-left:3px solid var(--mon-purple);padding:16px 20px;background:rgba(74,35,90,0.06);border-radius:0 3px 3px 0;font-style:italic;color:var(--text);line-height:2;font-size:14px;">
+          Quand l'aube se l&egrave;ve sur les eaux grises,<br>
+          Et que le vent porte le sel et le fer,<br>
+          Souviens-toi de ceux que la nuit a pris,<br>
+          Debout sur le roc, face &agrave; la mer.<br><br>
+          Ils &eacute;taient jeunes, ils &eacute;taient peu,<br>
+          Des mains qui tremblaient sous l'armure froide,<br>
+          Elle a dit &mdash; <em>regardez-moi dans les yeux,</em><br>
+          <em>Kaelor nous voit. Tenez la foi.</em><br><br>
+          <em>Et l'&icirc;le a tenu,<br>
+          Trois jours, trois nuits,<br>
+          Contre l'acier et la poudre,<br>
+          Contre la mar&eacute;e et l'oubli,<br>
+          L'Indompt&eacute;e<br>
+          N'a pas fl&eacute;chi.</em><br><br>
+          Le deuxi&egrave;me jour les canons tonn&egrave;rent,<br>
+          Le troisi&egrave;me la brume avala tout,<br>
+          Les Chasseurs cherch&egrave;rent &mdash; ne trouv&egrave;rent<br>
+          Que le silence, et les pierres, et nous.<br><br>
+          Elle ne leur a pas demand&eacute; de survivre,<br>
+          Elle leur a demand&eacute; de ne pas c&eacute;der,<br>
+          Il y a des morts qui continuent de vivre,<br>
+          Dans la gorge de ceux qui savent chanter.<br><br>
+          <em>Et l'&icirc;le a tenu,<br>
+          Trois jours, trois nuits,<br>
+          Contre l'acier et la poudre,<br>
+          Contre la mar&eacute;e et l'oubli,<br>
+          L'Indompt&eacute;e<br>
+          N'a pas fl&eacute;chi.</em><br><br>
+          Alors l&egrave;ve les yeux quand tout vacille,<br>
+          Quand la foi chancelle et que le doute vient,<br>
+          Une femme et des gamins sur une &icirc;le,<br>
+          Ont tenu le monde &mdash; souviens-t'en.<br><br>
+          <em>Et l'&icirc;le a tenu,<br>
+          Trois jours, trois nuits,<br>
+          Contre l'acier et la poudre,<br>
+          Contre la mar&eacute;e et l'oubli,<br>
+          L'Indompt&eacute;e<br>
+          N'a pas fl&eacute;chi.</em>
+          <span style="display:block;margin-top:12px;font-size:11px;color:var(--text3);font-style:normal;letter-spacing:0.05em;">— Interpr&eacute;t&eacute;e par Sebasti&aacute;n Pierran d'Ysmandis, troupe Igni e Aqua</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </div>
@@ -2133,6 +2277,71 @@ ul.styled li strong { color:var(--gold2); }
   </div>
 </div>
 </div>
+<div id="page-pnj-diarmad" class="page">
+<div class="content header-haern">
+  <div class="page-header">
+    <div class="page-tag">PNJ Notables &middot; L&eacute;gendes d'Orhein</div>
+    <h1 class="page-title color-haern">Diarmad Mac Neart</h1>
+    <p class="page-quote">&#171; Que ceux qui veulent mourir, approche. &#187;</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Haern &mdash; terres fronti&egrave;res</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Vivant &mdash; la quarantaine avanc&eacute;e</div></div>
+    <div class="info-box"><div class="info-label">Hanse</div><div class="info-value">Les Dragons &mdash; fondateur et chef</div></div>
+    <div class="info-box full"><div class="info-label">R&ocirc;le actuel</div><div class="info-value">Leader de facto de Baile Cruaidh &mdash; sans titre, sans l'avoir voulu</div></div>
+  </div>
+
+  <div class="section">
+    <p>Il y a des hommes dont la r&eacute;putation arrive avant eux. Diarmad Mac Neart est de ceux-l&agrave;.</p>
+    <p>Chef des <strong class="color-haern">Dragons</strong> &mdash; une Hanse solide et redout&eacute;e sur la fronti&egrave;re haernienne &mdash; il tient Baile Cruaidh d'une main ferme depuis une d&eacute;cennie. Pas de titre officiel, pas de mandat des Six Familles, pas de l&eacute;gitimit&eacute; sur le papier. Juste un homme dont personne ne conteste l'autorit&eacute;, parce que ceux qui l'ont tent&eacute; n'ont pas recommenc&eacute;.</p>
+    <p style="font-style:italic;color:var(--text2);">Sa r&eacute;putation est simple et redoutable : il ne porte pas d'armes. Il n'en a jamais eu besoin.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Les Dragons</div>
+    <p>La Hanse qu'il a fond&eacute;e n'est pas la plus puissante d'Haern &mdash; cet honneur revient au bras de l'ouest, tenu par Le Loup. Mais les Dragons sont peut-&ecirc;tre les plus fiables. Protection de convois, s&eacute;curit&eacute; fronti&egrave;re, maintien de l'ordre &agrave; Baile Cruaidh &mdash; ils font le travail proprement, sans exc&egrave;s, sans bavures. Les Familles les regardent de travers parce qu'ils ne leur doivent rien. Les marchands les adorent pour la m&ecirc;me raison.</p>
+    <p>Diarmad choisit ses hommes lui-m&ecirc;me. Il ne prend pas n'importe qui. Et ce qu'il attend d'eux, il l'exige &eacute;galement de lui-m&ecirc;me &mdash; pas plus, pas moins.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Baile Cruaidh</div>
+    <p>La ville fronti&egrave;re qu'il d&eacute;fendit contre le raid de la Matriarche <strong>Delgermaa</strong> aurait d&ucirc; rester un avant-poste poussi&eacute;reux. Sous sa direction de facto, elle est devenue prosp&egrave;re &mdash; commerce frontalier avec les clans orcs, routes s&eacute;curis&eacute;es, une stabilit&eacute; que personne n'aurait pari&eacute;e possible &agrave; cet endroit.</p>
+    <p style="font-style:italic;color:var(--text2);">Diarmad ne gouverne pas. Il tient. La nuance est importante pour lui.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Ce qu'on dit</div>
+    <ul style="list-style:none;padding:0;margin:0;color:var(--text);line-height:2.2;">
+      <li>&#8250; Qu'il a vaincu Delgermaa en duel &agrave; mains nues devant ses propres guerriers.</li>
+      <li>&#8250; Qu'il est pass&eacute; par un des temples de l'Ordre de Neart a-staigh.</li>
+      <li>&#8250; Qu'il ne l&egrave;ve jamais la voix.</li>
+      <li style="font-style:italic;color:var(--text2);">&#8250; Que c'est justement pour &ccedil;a qu'on l'&eacute;coute.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="mystery-box">
+      <div class="mystery-title">&#8856; Le Dragon</div>
+      <p style="color:var(--text2);margin-bottom:16px;">Certaines v&eacute;rit&eacute;s ne se r&eacute;v&egrave;lent qu'&agrave; ceux qui connaissent le mot juste...</p>
+      <div id="diarmad-lock">
+        <input type="password" id="diarmad-pass" placeholder="Mot de passe..." style="background:var(--bg);border:1px solid var(--border2);border-radius:3px;padding:10px 14px;color:var(--text);font-family:'Crimson Pro',serif;font-size:15px;width:200px;margin-right:8px;" onkeypress="if(event.key==='Enter'){{unlockSecret('diarmad-pass','diarmad-secret','diarmad-error','Yakuza')}}" />
+        <button onclick="unlockSecret('diarmad-pass','diarmad-secret','diarmad-error','Yakuza')" style="background:rgba(92,58,30,0.3);border:1px solid var(--haern-brown);border-radius:3px;padding:10px 20px;color:var(--haern-light);font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">D&eacute;verrouiller</button>
+        <p id="diarmad-error" style="display:none;color:var(--orc-light);font-size:14px;margin-top:10px;">Mot de passe incorrect.</p>
+      </div>
+    </div>
+    <div id="diarmad-secret" style="display:none;">
+      <p>Diarmad Mac Neart est l'un des hommes les plus dangereux qu'on puisse croiser sur la fronti&egrave;re haernienne. Ce n'est pas une r&eacute;putation entretenue &mdash; c'est un fait simple, froid, que ceux qui ont essay&eacute; de le contester ont appris &agrave; leurs d&eacute;pens. Sa force est r&eacute;elle, sa ma&icirc;trise absolue, et dans un combat il n'y a pas de place pour les demi-mesures.</p>
+      <p>Ce que personne ne voit derri&egrave;re &ccedil;a, c'est le reste.</p>
+      <p>Diarmad Mac Neart aime les gens. Pas en grand, pas en discours, pas en d&eacute;clarations &mdash; en petit, en quotidien, en silencieux. Le gamin des rues qu'il a vu tra&icirc;ner trois fois de trop devant ses entrep&ocirc;ts et qu'il a fini par nourrir. Le vieux marchand &agrave; qui il se souvient toujours de demander des nouvelles de sa femme. L'accord qu'il honore m&ecirc;me quand personne ne le verrait s'il ne le faisait pas.</p>
+      <p>Il ne veut qu'une chose, au fond : que les gens autour de lui aillent bien. Il ne le dira jamais. Il se contente de faire en sorte que ce soit le cas.</p>
+      <div class="section-subtitle color-haern">Eimhear</div>
+      <p>Une petite fille qu'il a recueillie il y a quelques ann&eacute;es &mdash; orpheline des fronti&egrave;res, comme lui l'&eacute;tait jadis. Il ne parle pas d'elle en public. Il ne laisse personne s'approcher d'elle sans raison valable. Et il s'assure qu'elle ne manque de rien &mdash; pas seulement de nourriture ou de toit, mais d'attention, d'&eacute;ducation, de la certitude qu'il y a quelqu'un qui veille.</p>
+      <p>C'est l'homme le plus redoutable de Baile Cruaidh. Et c'est lui qu'on entend lire des histoires le soir quand la ville dort.</p>
+      <p style="font-style:italic;color:var(--text2);">Il ne le montrera pas. Mais c'est l&agrave;.</p>
+    </div>
+  </div>
+</div>
+</div>
 <div id="page-terra-gigantum" class="page">
 <div class="content header-orc">
   <div class="page-header">
@@ -2253,6 +2462,74 @@ ul.styled li strong { color:var(--gold2); }
     <div class="section-title">La Tour elle-m&#234;me</div>
     <p>L'&#233;difice est ancien &mdash; plus ancien, selon certains &#233;rudits d'Hyacenthus, que n'importe quelle construction monilienne connue. Ses pierres ne correspondent &#224; aucune technique de taille r&#233;pertori&#233;e. Son sommet dispara&#238;t parfois dans les brumes du lac m&#234;me par temps clair. Et depuis que Krauss s'y est install&#233;, les sentinelles du clerg&#233; not&#233;rent quelque chose d'&#233;trange : les anomalies magiques semblent l&#233;g&#232;rement moins fr&#233;quentes dans un rayon de quelques kilom&#232;tres autour du Lac Bruma.</p>
     <p>Personne n'a demand&#233; &#224; Krauss d'expliquer pourquoi. Personne n'a vraiment envie de conna&#238;tre la r&#233;ponse.</p>
+  </div>
+</div>
+</div>
+<div id="page-dents-calmes" class="page">
+<div class="content header-curico">
+  <div class="page-header">
+    <div class="page-tag">Lieux &middot; Archipel</div>
+    <h1 class="page-title color-curico">Les Dents Calmes</h1>
+    <p class="page-quote">&#171; L'archipel que tout le monde veut et que personne ne contr&ocirc;le vraiment. &#187;</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Localisation</div><div class="info-value">&Agrave; l'est de la Br&egrave;che &mdash; passage maritime entre les deux continents</div></div>
+    <div class="info-box"><div class="info-label">Statut officiel</div><div class="info-value">Administration curicane &mdash; th&eacute;orique</div></div>
+    <div class="info-box"><div class="info-label">Statut r&eacute;el</div><div class="info-value">Pirates, d&eacute;serteurs, opportunistes</div></div>
+    <div class="info-box"><div class="info-label">Climat</div><div class="info-value">Variable &mdash; tropical &agrave; temp&eacute;r&eacute; selon les &icirc;les, m&eacute;t&eacute;o chaotique</div></div>
+  </div>
+
+  <div class="section">
+    <p>&Agrave; l'est de la Br&egrave;che, l&agrave; o&ugrave; son influence s'&eacute;vanouit et o&ugrave; la mer redevient ordinaire, six &icirc;les s'&eacute;tendent sur plusieurs centaines de kilom&egrave;tres. Les Dents Calmes &mdash; ainsi nomm&eacute;es pour les r&eacute;cifs affleurant sous la surface qui ont &eacute;ventr&eacute; plus d'un navire imprudent &mdash; constituent l'un des rares passages maritimes entre les deux continents qui ne passe pas par les eaux chaotiques de la Br&egrave;che.</p>
+    <p>Inhabit&eacute; depuis des temps imm&eacute;moriaux, si l'on excepte quelques ruines d'une civilisation que personne n'a encore perc&eacute;e, l'archipel est d'une richesse extraordinaire. C'est pour &ccedil;a qu'on s'est battu. C'est pour &ccedil;a qu'on continue de venir.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Les Six &Icirc;les</div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(26,82,118,0.4)"><span class="trait-name color-curico">Prima Dens</span><span class="trait-type">Minerais pr&eacute;cieux</span></div>
+      <div class="trait-body"><p>La plus grande, la plus convoitée. Ses gisements de minerais pr&eacute;cieux ont d&eacute;clench&eacute; une guerre et font encore saliver les Six Familles haerniennes depuis leurs bureaux de Dunvarr. Climat temp&eacute;r&eacute;, c&ocirc;tes rocheuses, int&eacute;rieur dense. Actuellement tenue par le chef pirate le plus puissant de l'archipel &mdash; jusqu'&agrave; ce que quelqu'un le d&eacute;tr&ocirc;ne, ce qui arrive r&eacute;guli&egrave;rement.</p></div>
+    </div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(26,82,118,0.4)"><span class="trait-name color-curico">Silvestria</span><span class="trait-type">For&ecirc;ts et bois rares</span></div>
+      <div class="trait-body"><p>Couverte d'une for&ecirc;t dense aux essences rares. Bois pr&eacute;cieux, r&eacute;sines m&eacute;dicinales, plantes qu'on ne trouve nulle part ailleurs. L'air y est chaud et humide, presque tropical. C'est l&agrave; que le premier coup de feu de la guerre fut tir&eacute;, dans la brume d'un matin d'&eacute;t&eacute;. Les arbres ont repouss&eacute; depuis. La plaque comm&eacute;morative qu'un officier monilien avait fait poser a disparu depuis longtemps.</p></div>
+    </div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(26,82,118,0.4)"><span class="trait-name color-curico">Thymiara</span><span class="trait-type">&Eacute;pices</span></div>
+      <div class="trait-body"><p>L'&icirc;le aux &eacute;pices. Une odeur ent&ecirc;tante qui se per&ccedil;oit &agrave; des lieues &agrave; la ronde par vent favorable. Climat tropical, v&eacute;g&eacute;tation dense et color&eacute;e. Les pirates qui la tiennent actuellement ont compris qu'il valait mieux taxer le commerce que le d&eacute;truire &mdash; ce qui en fait l'&icirc;le la mieux g&eacute;r&eacute;e de l'archipel, ce qui n'est pas un grand compliment.</p></div>
+    </div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(26,82,118,0.4)"><span class="trait-name color-curico">Feronia</span><span class="trait-type">Faune extraordinaire</span></div>
+      <div class="trait-body"><p>Des cr&eacute;atures qu'on ne trouve nulle part ailleurs sur Orhein &mdash; certaines document&eacute;es par quelques rares naturalistes, la plupart pas encore nomm&eacute;es. Climat changeant, m&eacute;t&eacute;o impr&eacute;visible. Les naturalistes qui tentent d'y mener des exp&eacute;ditions reviennent rarement avec leurs notes intactes. Parfois ils ne reviennent pas du tout.</p></div>
+    </div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(60,20,80,0.5)"><span class="trait-name" style="color:#b39ddb">Oblita</span><span class="trait-type">L'Oubli&eacute;e &mdash; Ruines pr&eacute;-Fracture</span></div>
+      <div class="trait-body"><p>Des ruines pr&eacute;-Fracture qui couvrent une bonne partie de l'&icirc;le &mdash; structures massives, inscriptions ind&eacute;chiffrables, une architecture qui ne ressemble &agrave; rien de connu. Personne ne sait qui les a b&acirc;ties. Les pirates &eacute;vitent l'&icirc;le par superstition. Les quelques exp&eacute;ditions acad&eacute;miques qui ont tent&eacute; leur chance sont revenues soit bredouilles, soit pas revenues du tout. Climat froid et brumeux.</p></div>
+    </div>
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(139,37,0,0.4)"><span class="trait-name color-orc">Insula Nord</span><span class="trait-type">L'&Icirc;le d'Hortense</span></div>
+      <div class="trait-body"><p>La plus petite, la plus septentrionale, la plus inhospitali&egrave;re. Vents violents, c&ocirc;tes d&eacute;chiquetées, int&eacute;rieur rocailleux et st&eacute;rile. Depuis la bataille, elle n'a jamais vraiment &eacute;t&eacute; r&eacute;habilit&eacute;e. Ce qu'il reste des fortifications moniliennes et haerniennes se m&ecirc;le aux ruines naturelles. Les pirates l'&eacute;vitent par pragmatisme &mdash; il n'y a rien &agrave; voler... officiellement. Ceux qui savent o&ugrave; chercher racontent autre chose.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">L'Organisation &mdash; Le Bordel Organis&eacute;</div>
+    <p>Dire que les Dents Calmes sont gouvern&eacute;es serait g&eacute;n&eacute;reux. Elles sont <em>tenues</em> &mdash; par des pirates, des d&eacute;serteurs reconvertis, des opportunistes de toutes nationalit&eacute;s qui ont d&eacute;cid&eacute; que ces &icirc;les valaient mieux que ce qu'ils laissaient derri&egrave;re eux.</p>
+    <p>Il n'y a pas de roi des Dents Calmes. Il y a un <em>chef du moment</em> &mdash; celui qui contr&ocirc;le Prima Dens, g&eacute;n&eacute;ralement. Ce titre change de mains environ une fois par an, parfois par les armes, parfois par une &eacute;lection informelle dans une taverne apr&egrave;s beaucoup trop &agrave; boire.</p>
+    <ul class="styled">
+      <li>On ne touche pas aux bateaux neutres</li>
+      <li>On ne tue pas les marchands &mdash; on les taxe</li>
+      <li>On ne provoque pas les navires de Curico</li>
+      <li>On ne va pas &agrave; Oblita la nuit</li>
+    </ul>
+    <p><em>Le reste est n&eacute;gociable.</em></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Traverser l'Archipel</div>
+    <p>Possible. Toujours possible. Mais &ccedil;a a un prix.</p>
+    <p>Soit on paye le p&eacute;age au chef du moment &mdash; en or, en marchandises, en informations, selon l'humeur du jour. Soit on n&eacute;gocie avec le capitaine de chaque &icirc;le s&eacute;par&eacute;ment. Soit on tente de passer discr&egrave;tement entre les &icirc;les la nuit, en esp&eacute;rant que les r&eacute;cifs et la m&eacute;t&eacute;o cha&ocirc;tique ne font pas le travail &agrave; la place des pirates.</p>
+    <p>Curico maintient officiellement que l'archipel est sous son administration. Les Cinq Doigts entretiennent des contacts discrets avec certains chefs pirates &mdash; pour s'assurer que le commerce continue de passer. Pour le reste, ils ferment les yeux.</p>
   </div>
 </div>
 </div>
@@ -2411,6 +2688,219 @@ ul.styled li strong { color:var(--gold2); }
     <p>La résurrection crée un vide légal que personne n'a vraiment voulu combler. Si un temple peut rattacher une âme avec la bénédiction de Serath, un nécromancien qui argumente qu'il fait techniquement la même chose — sans les papiers, sans le clergé, mais avec le même résultat — a-t-il tort ?</p>
     <p>Juridiquement ? C'est flou. Suffisamment flou pour qu'un Magister compétent tente l'argument, à ses risques et périls. Suffisamment flou pour qu'un Justicar l'ignore souverainement s'il n'a pas envie de se lancer dans un débat théologique un jeudi matin.</p>
     <p>C'est exactement le genre de fissure dans laquelle un bon avocat glisse son argument. Et exactement le genre de fissure que l'Église préférerait refermer avant que quelqu'un s'en serve vraiment.</p>
+  </div>
+
+</div>
+</div>
+<div id="page-commerce" class="page">
+<div class="content">
+  <div class="page-header">
+    <div class="page-tag">Concepts &amp; Lore &middot; &Eacute;conomie</div>
+    <h1 class="page-title color-gold">Le Commerce entre Monilia et Haern</h1>
+    <p class="page-quote">&#171; On se d&eacute;teste depuis cinq si&egrave;cles. On se vend des choses depuis presque aussi longtemps. &#187;</p>
+  </div>
+
+  <div class="section">
+    <p>Il y a une v&eacute;rit&eacute; que ni Monilia ni Haern n'aime admettre publiquement : elles ont besoin l'une de l'autre. Pas d'amour dans cette affaire &mdash; juste de la n&eacute;cessit&eacute;, du pragmatisme, et l'interm&eacute;diaire commode qu'est Curico pour faire semblant que &ccedil;a n'existe pas vraiment.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Les D&eacute;buts &mdash; L'Ignorance Mutuelle (An 0&ndash;150)</div>
+    <p>Dans les d&eacute;cennies qui suivirent la Grande Fracture, il n'y eut pas de commerce. Pas m&ecirc;me le d&eacute;but d'un commerce. Les survivants moniliens &eacute;taient occup&eacute;s &agrave; reconstruire ce que la catastrophe avait d&eacute;truit. Le contact entre les deux rives &eacute;tait inexistant &mdash; simplement parce qu'il n'y avait encore personne de l'autre c&ocirc;t&eacute;.</p>
+    <p>En l'an 150, un groupe d'insoumis traversa la Br&egrave;che. Pas des marchands &mdash; des fuyards, des gens qui avaient tourn&eacute; le dos &agrave; Monilia et &agrave; ses dieux. On ne fait pas commerce avec ce qu'on a quitt&eacute;. On ne regarde pas en arri&egrave;re.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Les Premi&egrave;res Frictions (An 150&ndash;300)</div>
+    <p>Haern commença &agrave; s'&eacute;tablir p&eacute;niblement. Les colonies tinrent. Les Gobelins furent rencontr&eacute;s, apprivois&eacute;s, et leurs techniques int&eacute;gr&eacute;es. Et quelques navigateurs audacieux commenc&egrave;rent &agrave; faire la liaison entre les deux rives &mdash; d'abord par curiosit&eacute;, puis par opportunisme.</p>
+    <p>Les premiers &eacute;changes furent timides, m&eacute;fiants, souvent clandestins. Monilia n'approuvait pas officiellement &mdash; commercer avec des apostats qui avaient abandonn&eacute; la foi des Cinq, c'&eacute;tait th&eacute;ologiquement probl&eacute;matique. Haern n'approuvait pas davantage &mdash; acheter des produits magiques &agrave; une th&eacute;ocratie qu'on m&eacute;prisait, c'&eacute;tait id&eacute;ologiquement inconfortable.</p>
+    <p>Mais les herbes m&eacute;dicinales moniliennes gu&eacute;rissaient des blessures que la chirurgie haernienne ne savait pas encore traiter. Et les m&eacute;taux que Haern extrayait de ses terres ingrates &eacute;taient d'une qualit&eacute; que Monilia ne pouvait pas reproduire.</p>
+    <p style="font-style:italic;color:var(--text2);">On fit donc commerce. Discr&egrave;tement. En regardant ailleurs.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Le Commerce Officieux (An 300&ndash;487)</div>
+    <p>Avec l'&eacute;mergence de Curico comme plaque tournante maritime, les &eacute;changes cess&egrave;rent d'&ecirc;tre clandestins pour devenir simplement... non officiels. Curico ne prenait pas parti. Curico vendait &agrave; tout le monde. Et tout le monde achetait &agrave; Curico.</p>
+    <p>Les volumes grossirent consid&eacute;rablement. Monilia d&eacute;couvrit les premi&egrave;res innovations gobelines avec un m&eacute;lange d'int&eacute;r&ecirc;t et d'inqui&eacute;tude &mdash; ces machines qui fonctionnaient sans magie, ces armes qui tiraient &agrave; distance, cette logique m&eacute;canique qui semblait d&eacute;fier l'ordre naturel. Le Haut Clerg&eacute; d&eacute;battit. La r&eacute;ponse pratique l'emporta sur la r&eacute;ponse th&eacute;ologique.</p>
+    <p>Haern, de son c&ocirc;t&eacute;, commença &agrave; d&eacute;pendre sans le dire des produits agricoles moniliens. Les Plaines d'Aurum nourrissaient mieux qu'aucune terre haernienne. Les rem&egrave;des moniliens soignaient plus vite. On achetait, on revendait sous d'autres noms, on ne posait pas de questions.</p>
+    <p>Officiellement, les deux nations se m&eacute;prisaient. Officieusement, leurs &eacute;conomies s'entrem&ecirc;laient prudemment, fil apr&egrave;s fil, via Curico qui s'enrichissait &agrave; vue d'&oelig;il.</p>
+    <p style="font-style:italic;color:var(--text2);">Pr&egrave;s de deux si&egrave;cles de commerce officieux &mdash; suffisamment longtemps pour que personne ne se souvienne vraiment d'une &eacute;poque o&ugrave; &ccedil;a n'existait pas.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">La Guerre &mdash; L'Arr&ecirc;t Brutal (An 487&ndash;490)</div>
+    <p>Quand les premi&egrave;res vol&eacute;es de balles claqu&egrave;rent sur Silvestria, le commerce s'arr&ecirc;ta net. Embargo total des deux c&ocirc;t&eacute;s, dans un bel &eacute;lan de coh&eacute;rence id&eacute;ologique que les deux nations maintinrent pendant trois ans.</p>
+    <div class="advert" style="border-color:var(--curico-blue)">
+      <div class="advert-title" style="color:var(--curico-light)">Curico pendant la guerre</div>
+      Elle continua. Discr&egrave;tement, prudemment, en changeant les noms sur les manifestes de cargaison. Elle n'avait pas de camp. Elle avait des clients.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">La Reprise &mdash; La Paix des Comptables (An 490&ndash;547)</div>
+    <p>Le trait&eacute; sign&eacute;, les canons refroidis, les deux nations se retrouv&egrave;rent face &agrave; un probl&egrave;me pratique : leurs &eacute;conomies avaient souffert de trois ans d'embargo autant que de trois ans de guerre.</p>
+    <p>La reprise fut lente. M&eacute;fiante. Charg&eacute;e de symboles. On ne recommença pas par les produits strat&eacute;giques &mdash; trop sensible, trop charg&eacute;. On recommença par les &eacute;pices de Thymiara, les textiles, les objets de luxe. Des choses dont on pouvait dire que c'&eacute;tait du commerce culturel, pas politique.</p>
+    <p>Puis les choses s&eacute;rieuses revinrent progressivement. Les m&eacute;taux haerniens. Les produits agricoles moniliens. Les innovations gobelines que Monilia achetait en faisant semblant de les avoir invent&eacute;es.</p>
+    <p>Aujourd'hui, en l'an 547, le commerce entre les deux nations est robuste &mdash; presque aussi important qu'avant la guerre. Il transite toujours majoritairement par Curico, qui prend sa part sur chaque transaction avec la r&eacute;gularit&eacute; d'un m&eacute;tronome. Il reste charg&eacute; de m&eacute;fiance, de clauses restrictives, de droits de douane punitifs habill&eacute;s en r&egrave;glements sanitaires.</p>
+    <p style="font-style:italic;color:var(--text2);">Mais il existe. Et les deux nations savent que l'interrompre &agrave; nouveau leur co&ucirc;terait plus cher que de continuer &agrave; se d&eacute;tester poliment.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Ce que chacun ach&egrave;te &mdash; et ne veut pas admettre</div>
+    <table class="stat-table">
+      <tr><td class="color-mon">Monilia ach&egrave;te</td><td>M&eacute;taux de qualit&eacute;, innovations m&eacute;caniques gobelines, armes &agrave; feu pour ses garnisons fronti&egrave;res &mdash; discr&egrave;tement, sans publicit&eacute;. Et des informations, via Curico, sur les d&eacute;veloppements technologiques haerniens.</td></tr>
+      <tr><td class="color-haern">Haern ach&egrave;te</td><td>Produits agricoles des Plaines d'Aurum, rem&egrave;des et herbes m&eacute;dicinales, objets d'artisanat de luxe pour les grandes familles qui ne l'admettront jamais. Et parfois, discr&egrave;tement, les services de mages pour des projets que la technologie seule ne suffit pas &agrave; accomplir.</td></tr>
+      <tr><td class="color-curico">Curico ach&egrave;te</td><td>Tout le monde. Et revend &agrave; tout le monde, avec une marge confortable et un sourire imp&eacute;n&eacute;trable.</td></tr>
+    </table>
+  </div>
+
+</div>
+</div>
+<div id="page-neart-a-staigh" class="page">
+<div class="content header-haern">
+  <div class="page-header">
+    <div class="page-tag">Concepts &amp; Lore &middot; Haern &middot; Ordre</div>
+    <h1 class="page-title color-haern">L'Ordre de Neart a-staigh</h1>
+    <p class="page-quote">&#171; La Force Int&eacute;rieure. &#187;</p>
+  </div>
+  <div class="info-grid">
+    <div class="info-box"><div class="info-label">Origine</div><div class="info-value">Haern &mdash; nord-ouest du territoire</div></div>
+    <div class="info-box"><div class="info-label">Statut</div><div class="info-value">Reconnu et approuv&eacute; par les Six Familles</div></div>
+    <div class="info-box"><div class="info-label">Temples</div><div class="info-value">Quatre &mdash; Bi&agrave;deadh N&eacute;amhaidh, D&ugrave;n Neart, Faire, Doimhne</div></div>
+    <div class="info-box full"><div class="info-label">Philosophie</div><div class="info-value">Le corps comme outil ultime. La discipline comme seule doctrine. La force qui vient de l'int&eacute;rieur.</div></div>
+  </div>
+
+  <div class="section">
+    <p>Dans une nation qui fait confiance &agrave; ce qu'on peut tenir dans ses mains, l'Ordre de Neart a-staigh repr&eacute;sente une philosophie pouss&eacute;e &agrave; son extr&ecirc;me logique : le corps humain comme outil ultime, la discipline comme seule doctrine, et la force qui vient de l'int&eacute;rieur comme seule magie digne de ce nom.</p>
+    <p style="font-style:italic;color:var(--text2);">Pas de dieux. Pas de grimoire. Pas de machine. Juste l'homme, sa volont&eacute;, et ce qu'il peut en faire.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Ce qu'ils sont</div>
+    <p>L'Ordre n'est pas une religion. Les Six Familles y tiennent &mdash; elles approuvent ce qui produit des r&eacute;sultats, pas ce qui demande de la d&eacute;votion. Et les temples de Neart a-staigh produisent des r&eacute;sultats ind&eacute;niables : des combattants d'une efficacit&eacute; redoutable, form&eacute;s &agrave; des techniques que ni l'arm&eacute;e r&eacute;guli&egrave;re ni les Chasseurs ne peuvent reproduire facilement.</p>
+    <p>Beaucoup de soldats haerniens r&ecirc;vent de passer par un temple. Peu y sont accept&eacute;s. La s&eacute;lection est s&eacute;v&egrave;re &mdash; non pas par &eacute;litisme arbitraire, mais parce que ce qu'on y enseigne requ&iert une pr&eacute;disposition naturelle. Sans elle, des ann&eacute;es d'entra&icirc;nement produisent un bon soldat. Avec elle, elles produisent quelque chose d'autre.</p>
+    <p>Quelques Chasseurs en sont issus. Des originaux, dit-on dans les casernes. Mais leur force est ind&eacute;niable, et personne ne le conteste deux fois.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">La Force Canal&iacute;s&eacute;e</div>
+    <p>Ce que l'Ordre appelle <em>neart a-staigh</em> n'est pas de la magie au sens o&ugrave; Monilia l'entend &mdash; pas de sorts, pas d'invocations, pas de lien aux dieux. C'est quelque chose de plus ancien, de plus visc&eacute;ral. Une &eacute;nergie que certains corps portent naturellement, que la discipline peut apprendre &agrave; canaliser, &agrave; diriger, &agrave; transformer en quelque chose de concret.</p>
+    <p>Haern ne sait pas vraiment comment appeler &ccedil;a. Les th&eacute;ologiens moniliens qui en ont entendu parler ont des opinions &mdash; aucune flatteuse. L'Ordre, lui, ne cherche pas de d&eacute;finition. Il cherche des r&eacute;sultats.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Les Quatre Temples</div>
+
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(92,58,30,0.5)"><span class="trait-name color-haern">Bi&agrave;deadh N&eacute;amhaidh</span><span class="trait-type">Le Premier Temple &mdash; Pics du nord-ouest</span></div>
+      <div class="trait-body">
+        <p>Le temple originel, le plus ancien, le plus pur. Personne ne sait exactement quand il a &eacute;t&eacute; fond&eacute; &mdash; les archives haerniennes les plus anciennes le mentionnent d&eacute;j&agrave; comme existant. C'est de lui que tous les autres descendent.</p>
+        <p>Il vit en isolement complet. Ses ma&icirc;tres ne descendent pas dans les villes. Ses &eacute;l&egrave;ves n'en reviennent pas avant des ann&eacute;es &mdash; certains n'en reviennent jamais, par choix. Ce qu'on y enseigne, ce qu'on y apprend, ce qu'on y devient &mdash; tr&egrave;s peu peuvent en t&eacute;moigner.</p>
+        <p>Y acc&eacute;der est une t&acirc;che quasi impossible. La montagne elle-m&ecirc;me y veille &mdash; les pics de Bi&agrave;deadh N&eacute;amhaidh sont inhospitaliers, tra&icirc;tres, et changeants. Les rares voyageurs qui tentent l'ascension pour trouver le temple sont d'abord accueillis poliment par des moines qui leur indiquent le chemin du retour.</p>
+        <p>Ceux qui insistent sont accueillis moins poliment.</p>
+        <p style="font-style:italic;color:var(--text2);">Ceux qui continuent malgr&eacute; tout... eh bien. La montagne est dangereuse. Ces choses arrivent.</p>
+      </div>
+    </div>
+
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(92,58,30,0.5)"><span class="trait-name color-haern">D&ugrave;n Neart</span><span class="trait-type">Dunvarr &mdash; La Capitale</span></div>
+      <div class="trait-body">
+        <p>Le temple le plus accessible, le plus visible, le plus li&eacute; aux Familles. Situ&eacute; dans les quartiers industriels de Dunvarr, il sert de vitrine &agrave; l'Ordre &mdash; les candidats y passent leur s&eacute;lection initiale, les Familles y envoient leurs fils et filles prometteurs. Son architecture sobre tranche avec la grandiosit&eacute; industrielle de la capitale. On dit que les ma&icirc;tres de D&ugrave;n Neart sont les plus exigeants de l'Ordre &mdash; pr&eacute;cis&eacute;ment parce qu'ils savent que leurs &eacute;l&egrave;ves seront vus.</p>
+      </div>
+    </div>
+
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(92,58,30,0.5)"><span class="trait-name color-haern">Faire</span><span class="trait-type">Zone fronti&egrave;re &mdash; &Agrave; l'or&eacute;e des steppes orcs</span></div>
+      <div class="trait-body">
+        <p>La vigilance. Ce temple forme ceux qui op&egrave;rent aux marges &mdash; &eacute;claireurs, gardes-fronti&egrave;res, Chasseurs qui travaillent dans les zones grises entre Haern et les clans orcs. Ses ma&icirc;tres connaissent les steppes mieux que la plupart des soldats haerniens, et ont un rapport ambigu avec les Orcs &mdash; ni hostilit&eacute; ouverte ni alliance d&eacute;clar&eacute;e. Une coexistence tendue, forg&eacute;e par des ann&eacute;es de proximit&eacute; forc&eacute;e.</p>
+      </div>
+    </div>
+
+    <div class="trait-card">
+      <div class="trait-header" style="background:rgba(92,58,30,0.5)"><span class="trait-name color-haern">Doimhne</span><span class="trait-type">Terres int&eacute;rieures &mdash; Localisation discr&egrave;te</span></div>
+      <div class="trait-body">
+        <p>La profondeur. Le plus discret des quatre temples accessibles. Peu savent exactement o&ugrave; il se trouve &mdash; quelque part dans les terres int&eacute;rieures haerniennes, loin des routes principales. Ses &eacute;l&egrave;ves sont rares, soigneusement s&eacute;lectionn&eacute;s, et quand ils en ressortent, personne ne sait exactement ce qu'ils sont devenus. Ce temple nourrit les rumeurs les plus persistantes sur ce que l'Ordre enseigne vraiment dans ses niveaux les plus profonds.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="page-guerre-dents-calmes" class="page">
+<div class="content">
+  <div class="page-header">
+    <div class="page-tag">Histoire &middot; An 487&ndash;490 AA</div>
+    <h1 class="page-title color-gold">La Guerre des Dents Calmes</h1>
+    <p class="page-quote">&#171; Trois ans de sang pour un coup de feu dont personne ne voulait. &#187;</p>
+  </div>
+
+  <div class="advert">
+    <div class="advert-title">En bref</div>
+    Conflit opposant Monilia et Haern pour le contr&ocirc;le de l'archipel des Dents Calmes. D&eacute;clench&eacute; par un incident fortuit, termin&eacute; par &eacute;puisement mutuel. M&eacute;di&eacute; par Curico. Jamais vraiment r&eacute;solu.
+  </div>
+
+  <div class="section">
+    <p>Il existe des guerres qui naissent de la haine, de l'id&eacute;ologie, de la conviction profonde qu'on se bat pour quelque chose qui en vaut la peine. La Guerre des Dents Calmes ne fut rien de tout &ccedil;a. Ce fut une guerre n&eacute;e d'un accident, nourrie par l'avidit&eacute;, et termin&eacute;e par l'&eacute;puisement. Ce qui ne l'emp&ecirc;cha pas d'&ecirc;tre l'un des conflits les plus d&eacute;vastateurs qu'Orhein ait connus depuis la Grande Fracture.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Les Raisons &mdash; L'Avidit&eacute; &agrave; Visage D&eacute;couvert</div>
+    <p>Les Dents Calmes &mdash; un archipel de six &icirc;les &agrave; l'est de la Br&egrave;che, l'un des rares passages maritimes entre les deux continents &mdash; &eacute;taient connues depuis des si&egrave;cles. Leurs richesses aussi : minerais pr&eacute;cieux, bois rares, &eacute;pices introuvables ailleurs, faune extraordinaire. Pendant des d&eacute;cennies, Monilia et Haern s'&eacute;taient regard&eacute;es en chiens de fa&iuml;ence, chacune sachant que poser le pied sur ces &icirc;les reviendrait &agrave; d&eacute;clarer la guerre &agrave; l'autre.</p>
+    <p>Puis quelqu'un d&eacute;cida que le risque en valait la peine. Les deux camps envoy&egrave;rent discr&egrave;tement des navires de reconnaissance. Puis des &eacute;quipes d'installation. Puis des soldats pour prot&eacute;ger ces &eacute;quipes. En l'an 487, les deux nations avaient des positions &eacute;tablies sur l'archipel et faisaient semblant de ne pas se voir.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">L'&Eacute;tincelle &mdash; Un Soldat Qui a Tir&eacute; Trop Vite</div>
+    <p>La v&eacute;rit&eacute; sur le premier coup de feu est &agrave; la fois banale et humiliante. Un navire de reconnaissance haernien s'approche trop pr&egrave;s d'une position monilienne fra&icirc;chement &eacute;tablie sur l'&icirc;le de Silvestria. Dans la brume du matin, un soldat haernien voit des silhouettes moniliennes qui avancent vers le rivage. Il tire.</p>
+    <p>On ne saura jamais vraiment pourquoi. Panique. Mauvaise visibilit&eacute;. Ordre mal compris. Peut-&ecirc;tre simplement un homme qui n'avait pas dormi depuis trois jours et qui avait le doigt trop pr&egrave;s de la gâchette.</p>
+    <p>Le camp monilien riposte. En quelques heures, les deux camps comptent leurs morts. Des diplomates habiles auraient pu &eacute;touffer l'incident. Mais les minerais de Prima Dens &eacute;taient trop tentants, les vieilles ranc&oelig;urs trop fra&icirc;ches, et les g&eacute;n&eacute;raux des deux c&ocirc;t&eacute;s trop press&eacute;s de justifier leurs budgets militaires. En moins d'un mois, les Dents Calmes sont officiellement en guerre.</p>
+    <div class="advert" style="border-color:var(--orc-red)">
+      <div class="advert-title" style="color:var(--orc-light)">Trois ans de sang</div>
+      Pour un coup de feu dont personne ne voulait vraiment.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">La Trahison des Alii</div>
+    <p>C'est ici que la Guerre des Dents Calmes cesse d'&ecirc;tre une simple querelle de ressources pour devenir quelque chose de plus sombre.</p>
+    <p>Jusqu'alors, les Alii occupaient dans la soci&eacute;t&eacute; monilienne une position ambigu&euml; et douloureuse &mdash; officiellement citoyens, officieusement trait&eacute;s comme une main d'&oelig;uvre quasi servile, rappel vivant d'une catastrophe que personne ne voulait &eacute;voquer. Face aux premi&egrave;res vol&eacute;es de balles haerniennes, face aux Chasseurs et &agrave; leurs munitions anti-magie, le Haut Clerg&eacute; fit un calcul froid et cynique.</p>
+    <p>Les Alii r&eacute;sistaient naturellement aux blessures. Ils ne tombaient pas malades. Ils ignoraient l'&eacute;puisement. On les conscrivit. On leur promit, en &eacute;change du service, la citoyennet&eacute; pleine et enti&egrave;re. On leur parla d'honneur, de sacrifice, de la reconnaissance &eacute;ternelle des Cinq.</p>
+    <p>On les envoya en premi&egrave;re ligne.</p>
+    <p>Beaucoup n'en revinrent pas. Ceux qui rentr&egrave;rent revinrent avec leurs blessures, leurs morts, et une promesse que l'&Eacute;glise tint... partiellement. Suffisamment pour qu'on ne puisse pas parler formellement de trahison. Insuffisamment pour que quiconque parmi les Alii oublie vraiment.</p>
+    <p style="font-style:italic;color:var(--text2);">La blessure est toujours l&agrave;. Elle ne cicatrisera peut-&ecirc;tre jamais.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">La Guerre &mdash; L'Acier contre la Magie</div>
+    <p>Pour Haern, la guerre fut aussi un laboratoire. Pour la premi&egrave;re fois &agrave; grande &eacute;chelle, les Six Familles d&eacute;ploy&egrave;rent l'arsenal que les ing&eacute;nieurs gobelins d&eacute;veloppaient depuis des d&eacute;cennies &mdash; armes &agrave; feu perfectionnées, v&eacute;hicules m&eacute;caniques blind&eacute;s, grenades de rupture con&ccedil;ues sp&eacute;cifiquement pour neutraliser les mages en combat. Les Chasseurs d'&eacute;lite furent engag&eacute;s en masse, avec des munitions anti-mages qui rendaient les sorts moniliens moins fiables, parfois mortels pour leurs propres lanceurs.</p>
+    <p>De l'autre c&ocirc;t&eacute;, Monilia r&eacute;pondit avec sa magie destructrice et ses Paladins. Les batailles furent brutales, courtes et meurtri&egrave;res des deux c&ocirc;t&eacute;s. Les &icirc;les chang&egrave;rent de mains plusieurs fois. Certaines furent ravag&eacute;es au point de perdre une partie de leurs ressources &mdash; ce pour quoi on se battait en premier lieu.</p>
+    <p>La rencontre entre deux doctrines militaires aux antipodes l'une de l'autre ne produisit pas de vainqueur. Elle produisit des morts, en quantit&eacute;.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">L'&Icirc;le du Nord &mdash; Trois Jours, Trois Nuits</div>
+    <p>Parmi toutes les batailles de la guerre, une seule est entr&eacute;e dans la l&eacute;gende.</p>
+    <p>L'&Icirc;le du Nord commandait les voies de passage entre les autres &icirc;les. Quand la garnison monilienne fut d&eacute;cim&eacute;e par une attaque surprise haernienne, il ne resta sur place qu'une Grande Cheffe Paladin et une unit&eacute; d'apprentis &mdash; des gamins &agrave; peine form&eacute;s, dont certains n'avaient jamais vu le combat.</p>
+    <p>Hortense Leona aurait pu ordonner la retraite. Elle ne le fit pas.</p>
+    <p>Pendant trois jours et trois nuits, face &agrave; deux bataillons haerniens appuy&eacute;s par une unit&eacute; de Chasseurs d'&eacute;lite, elle tint. Les apprentis tinrent. Quand les Chasseurs franchirent enfin les d&eacute;fenses au matin du quatri&egrave;me jour, ils ne trouv&egrave;rent que des ruines et des morts.</p>
+    <p>Mais l'&icirc;le avait tenu assez longtemps pour que des renforts moniliens d&eacute;barquent ailleurs et retournent la situation. Tactiquement, le sacrifice changea le cours de la bataille. Symboliquement, il changea quelque chose de plus profond encore dans l'&acirc;me monilienne.</p>
+    <p style="font-style:italic;color:var(--gold2);">On l'appelle L'Indompt&eacute;e depuis ce jour.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">La M&eacute;diation de Curico &mdash; La Paix des &Eacute;puis&eacute;s</div>
+    <p>En 490 AA, apr&egrave;s trois ans de conflit, les deux nations &eacute;taient saign&eacute;es &agrave; blanc. Des dignitaires des deux camps se tourn&egrave;rent vers Curico. La cit&eacute; neutre avait observ&eacute; le conflit depuis le d&eacute;but avec l'&oelig;il froid d'un comptable qui regarde deux clients se ruiner mutuellement. Elle accepta de m&eacute;dier &mdash; &agrave; ses conditions.</p>
+    <p>Le trait&eacute; fut long, &acirc;prement n&eacute;goci&eacute;, et satisfit peu de monde. Monilia obtint des garanties sur les voies maritimes. Haern obtint un acc&egrave;s commercial aux ressources de l'archipel. Curico obtint l'administration officielle des Dents Calmes et une position de m&eacute;diateur permanent entre les deux nations &mdash; ce qu'elle voulait depuis le d&eacute;but.</p>
+    <p style="font-style:italic;color:var(--text2);">La paix fut sign&eacute;e. Personne ne l'aima vraiment. Mais tout le monde en avait assez.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Les Cons&eacute;quences</div>
+    <table class="stat-table">
+      <tr><td class="color-mon">Monilia</td><td>La dette envers les Alii, jamais vraiment honor&eacute;e. La d&eacute;couverte que la technologie haernienne pouvait neutraliser la magie en combat. Et la l&eacute;gende d'Hortense Leona.</td></tr>
+      <tr><td class="color-haern">Haern</td><td>Une d&eacute;monstration concluante de l'arsenal gobelin. Les Six Familles en sortirent avec des carnets de commandes pleins et la conviction que la prochaine fois, elles seraient encore mieux pr&eacute;par&eacute;es.</td></tr>
+      <tr><td class="color-curico">Curico</td><td>Le moment fondateur. Avant les Dents Calmes, une cit&eacute; portuaire prospère. Apr&egrave;s, le m&eacute;diateur officiel d'un continent &mdash; une position qu'elle n'a jamais rendue depuis.</td></tr>
+      <tr><td class="color-alii">Les Alii</td><td>Une blessure sans mot pr&eacute;cis. Un avant et un apr&egrave;s. La promesse tenue partiellement. Le reste, ils le portent en silence.</td></tr>
+    </table>
   </div>
 
 </div>
